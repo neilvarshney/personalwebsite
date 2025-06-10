@@ -11,6 +11,6 @@ export const socialLinks = {
   twitter: "https://x.com/1tssirius",
   github: "https://github.com/neilvarshney/personalwebsite",
   instagram: "https://www.instagram.com/neil.varshney/",
-  linkedin: "https://www.linkedin.com/in/neil-varshney/",
+  linkedin: "https://www.linkedin.com/in/neil-varshneyddfsdf/",
   email: "mailto:neilvarshney@cmail.carleton.ca",
 };
