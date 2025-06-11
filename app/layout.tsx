@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./lib/config";
+import Aurora from "./components/aurora";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -82,6 +83,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="fixed inset-0 -z-10">
+            <Aurora
+              colorStops={["#5227FF", "#7cff67", "#5227FF"]}
+              amplitude={1.0}
+              blend={0.5}
+            />
+          </div>
           <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[624px] w-full">
             <Navbar />
             {children}
