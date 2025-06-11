@@ -4,7 +4,7 @@ import { socialLinks } from "./lib/config";
 export default function Page() {
   return (
     <section>
-      <a href={socialLinks.twitter} target="_blank">
+      <a href={socialLinks.linkedin} target="_blank">
         <Image
           src="/profile.png"
           alt="Profile photo"
@@ -24,13 +24,7 @@ export default function Page() {
         <p>
           Nextfolio has everything you need for a portfolio: MDX blog, SEO, RSS,
           Atom & JSON feeds, analytics, Tweet & YouTube embeds, KaTeX and {""}
-          <a
-            target="_blank"
-            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
-          >
-            more
-          </a>
-          .
+          more.
         </p>
         <p>
           Nextfolio is{" "}
@@ -49,13 +43,6 @@ export default function Page() {
           your Nextfolio site with Vercel in minutes and follow the set up
           instructions in the{" "}
           <a href="/blog/getting-started">Getting Started</a> post.
-        </p>
-        <p>
-          Built and maintained by{" "}
-          <a href="https://imsirius.xyz/" target="_blank">
-            Sirius
-          </a>
-          .
         </p>
       </div>
     </section>
