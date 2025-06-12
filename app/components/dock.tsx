@@ -36,6 +36,10 @@ export type DockProps = {
   spring?: SpringOptions;
 };
 
+type DockChildProps = {
+  isHovered?: MotionValue<number>;
+};
+
 type DockItemProps = {
   className?: string;
   children: React.ReactNode;
@@ -93,7 +97,7 @@ function DockItem({
       aria-haspopup="true"
     >
       {Children.map(children, (child) =>
-        cloneElement(child as React.ReactElement, { isHovered })
+        cloneElement(child as React.ReactElement<DockChildProps>, { isHovered })
       )}
     </motion.div>
   );
