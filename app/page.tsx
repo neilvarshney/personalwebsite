@@ -7,6 +7,7 @@ import ScrollReveal from './components/scroll-reveal';
 import LenisProvider from './components/LenisProvider';
 import FadeIn from './components/fade-in';
 import ScrollFloat from './components/scroll-reveal';
+import { TypeAnimation } from 'react-type-animation';
 
 declare global {
   interface Window {
@@ -21,57 +22,70 @@ export default function Page() {
         {/* Home Section */}
         <section id="home" className="min-h-screen flex items-center justify-center pt-20 pb-24">
           <div className="flex flex-col items-center">
-            <a href={socialLinks.linkedin} target="_blank">
-              <Image
-                src="/profile.png"
-                alt="Profile photo"
-                className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0"
-                unoptimized
-                width={160}
-                height={160}
-                priority
-              />
-            </a>
-            <FadeIn delay={0.2}>
-              <h1 className="mb-8 text-white text-2xl font-medium font-['Poppins']">B.CS Student @ Carleton University</h1>
+            <FadeIn delay={0.6}>
+              <a href={socialLinks.linkedin} target="_blank">
+                <Image
+                  src="/profile.png"
+                  alt="Profile photo"
+                  className="rounded-full bg-gray-100 block lg:mt-5 mt-0 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 transition-all duration-400 ease-in-out"
+                  unoptimized
+                  width={200}
+                  height={200}
+                  priority
+                />
+              </a>
             </FadeIn>
-            <div className="prose prose-neutral dark:prose-invert font-['Poppins']">
-              <FadeIn delay={0.4}>
-                <p>
-                  A clean, fast, and lightweight portfolio template built with Next.js,
-                  Vercel, and Tailwind CSS.
-                </p>
-              </FadeIn>
+            <div className="">
               <FadeIn delay={0.6}>
-                <p>
-                  Nextfolio has everything you need for a portfolio: MDX blog, SEO, RSS,
-                  Atom & JSON feeds, analytics, Tweet & YouTube embeds, KaTeX and {""}
-                  more.
-                </p>
+                <TypeAnimation
+                    sequence={[
+                      'Neil Varshney',
+                      1000, 
+                      'A Coder',
+                      1000,
+                      'A Programmer',
+                      1000,
+                      'A Developer',
+                      1000
+                    ]}
+                    wrapper="span"
+                    speed={1}
+                    style={{ textDecoration: 'underline', textDecorationColor: 'red', color: "white", fontSize: '3rem', display: 'inline-block', fontFamily: "Poppins", fontWeight: "bold" }}
+                    repeat={Infinity}
+                  />
               </FadeIn>
+            </div>
+            <div className="text-center prose prose-neutral dark:prose-invert font-['Poppins']">
               <FadeIn delay={0.8}>
                 <p>
-                  Nextfolio is{" "}
-                  <a href={socialLinks.github} target="_blank">
-                    open-source
-                  </a>{" "}
-                  and fully customizable, making it easy to add more features.
+                  I'm a second-year Computer Science student at Carleton University, specializing in Computer and Internet 
+                  Security. I'm constantly exploring the latest in network 
+                  defense, cryptography, and secure software development.
                 </p>
               </FadeIn>
-              <FadeIn delay={1}>
+              <FadeIn delay={1.0}>
                 <p>
-                  <a
-                    href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio"
-                    target="_blank"
-                  >
-                    Deploy
-                  </a>{" "}
-                  your Nextfolio site with Vercel in minutes and follow the set up
-                  instructions in the{" "}
-                  <a href="/blog/getting-started">Getting Started</a> post.
+                  I'm actively seeking internship opportunities in cybersecurity or software development throughout the year 
+                  where I can apply my academic knowledge and contribute to real-world security solutions. Feel 
+                  free to explore my projects or connect with me!
                 </p>
               </FadeIn>
             </div>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section id="education" className="min-h-screen flex items-center justify-center pt-20 pb-24">
+          <div className="prose prose-neutral dark:prose-invert font-['Poppins']">
+            <ScrollFloat
+              animationDuration={1}
+              ease='back.inOut(2)'
+              scrollStart='center bottom+=50%'
+              scrollEnd='bottom bottom-=40%'
+              stagger={0.1}
+            >
+              Education
+            </ScrollFloat>
           </div>
         </section>
 
@@ -127,4 +141,6 @@ export default function Page() {
   );
 }
 
-//
+// chroma grid for porjects
+//stepper for conatct me page
+// profile card for pfp

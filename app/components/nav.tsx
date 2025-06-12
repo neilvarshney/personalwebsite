@@ -3,19 +3,57 @@ import Link from "next/link";
 import { metaData } from "../lib/config";
 import GradientText from "./gradient-text";
 import ScrollReveal from './scroll-reveal';
+import Dock from './dock';
+import { VscHome, VscArchive, VscAccount, VscSettingsGear, VscBook } from 'react-icons/vsc';
 
-const navItems = {
-  "#home": { name: "Home" },
-  "#projects": { name: "Projects" },
-  "#blog": { name: "Blog" },
-  "#photos": { name: "Photos" },
-};
+const dockItems = [
+  { icon: <VscAccount size={18} className="text-blue-500 hover:text-blue-400" />, label: 'Profile', onClick: () => {e => 
+      e.preventDefault();
+      const target = document.querySelector('#home');
+      if (target && window.lenis) {
+        window.lenis.scrollTo(target, { offset: -100}); // adjust offset for navbar height
+      }
+    }
+  },
+  { icon: <VscBook size={18} className="text-orange-500 hover:text-orange-400" />, label: 'Education', onClick: () => {e => 
+      e.preventDefault();
+      const target = document.querySelector('#education');
+      if (target && window.lenis) {
+        window.lenis.scrollTo(target, { offset: 300}); // adjust offset for navbar height
+      }
+    }
+  },
+  { icon: <VscArchive size={18} className="text-green-500 hover:text-green-400" />, label: 'Projects', onClick: () => {e => 
+      e.preventDefault();
+      const target = document.querySelector('#projects');
+      if (target && window.lenis) {
+        window.lenis.scrollTo(target, { offset: 300}); // adjust offset for navbar height
+      }
+    }
+  },
+  { icon: <VscHome size={18} className="text-purple-500 hover:text-purple-400" />, label: 'Home', onClick: () => {e => 
+      e.preventDefault();
+      const target = document.querySelector('#blog');
+      if (target && window.lenis) {
+        window.lenis.scrollTo(target, { offset: 300}); // adjust offset for navbar height
+      }
+    }
+  },
+  { icon: <VscSettingsGear size={18} className="text-orange-500 hover:text-orange-400" />, label: 'Settings', onClick: () => {e => 
+      e.preventDefault();
+      const target = document.querySelector('#photos');
+      if (target && window.lenis) {
+        window.lenis.scrollTo(target, { offset: 800}); // adjust offset for navbar height
+      }
+    }
+  },
+];
 
 export function Navbar() {
   return (
-    <nav className="lg:mb-16 mb-12 py-5 fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-sm">
-      <div className="flex flex-col md:flex-row items-center justify-center max-w-[900px] mx-auto px-6 gap-y-4 md:gap-y-0 md:gap-x-8">
-        <a href="#home" className="font-['Playfair_Display'] text-6xl font-semibold text-center"
+    <nav className="fixed top-0 left-0 right-0 z-50 dark:bg-black/80 backdrop-blur-sm h-26 w-100%">
+      <div className="text-center">
+        <a href="#home"
           onClick={e => {
             e.preventDefault();
             const target = document.querySelector('#home');
@@ -24,7 +62,7 @@ export function Navbar() {
             }
           }}>
           <GradientText
-            colors={["red", "blue", "orange", "yellow", "green"]}
+            colors={["#610000", "#262626", "#610000", "#262626", "#610000"]}
             animationSpeed={5}
             showBorder={false}
             className="font-['Playfair_Display'] text-6xl font-semibold"
@@ -32,33 +70,15 @@ export function Navbar() {
             {metaData.title}
           </GradientText>
         </a>
-        <div className="flex flex-row gap-4 items-center">
-          {Object.entries(navItems).map(([path, { name }]) => (
-            <a
-              key={path}
-              href={path}
-              onClick={e => {
-                e.preventDefault();
-                const target = document.querySelector(path);
-                if (target && window.lenis && path==='#home') {
-                  window.lenis.scrollTo(target, { offset: -100}); // adjust offset for navbar height
-                }
-                else if(target && window.lenis && path==='#projects'){
-                  window.lenis.scrollTo(target, { offset: 300});
-                }
-                else if(target && window.lenis && path==='#blog'){
-                  window.lenis.scrollTo(target, { offset: 270});
-                }
-                else if(target && window.lenis && path==='#photos'){
-                  window.lenis.scrollTo(target, { offset: 800});
-                }
-              }}
-              className="mt-10 font-['Poppins'] text-white transition-all hover:text-blue-800 dark:hover:text-blue-200 flex align-middle relative"
-            >
-              {name}
-            </a>
-          ))}
-        </div>
+      </div>
+      <div>
+          <Dock 
+            className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg shadow-lg ml-[800px]"
+            items={dockItems}
+            panelHeight={60}
+            baseItemSize={30}
+            magnification={50}
+          />
       </div>
     </nav>
   );

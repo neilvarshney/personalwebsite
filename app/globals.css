@@ -31,8 +31,8 @@ html {
 }
 
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
-@import "./components/tweet.css";
+/* @plugin "@tailwindcss/typography"; */
+/* @import "./components/tweet.css"; */
 
 ::selection {
   background-color: #47a3f3;
