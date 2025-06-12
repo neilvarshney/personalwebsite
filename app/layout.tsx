@@ -118,8 +118,6 @@ export default function RootLayout({
               {children}
             </section>
             <Footer />
-            <Analytics />
-            <SpeedInsights />
           </main>
         </LenisProvider>
       </body>
