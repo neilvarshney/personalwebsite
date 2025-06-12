@@ -1,33 +1,48 @@
+"use client";
 import Link from "next/link";
-import { ThemeSwitch } from "./theme-switch";
+// import { ThemeSwitch } from "./theme-switch";
 import { metaData } from "../lib/config";
+import GradientText from "./gradient-text";
+import ScrollReveal from './scroll-reveal';
 
 const navItems = {
-  "/blog": { name: "Blog" },
-  "/projects": { name: "Projects" },
-  "/photos": { name: "Photos" },
+  "#home": { name: "Home" },
+  "#projects": { name: "Projects" },
+  "#blog": { name: "Blog" },
+  "#photos": { name: "Photos" },
 };
 
 export function Navbar() {
   return (
-    <nav className="lg:mb-16 mb-12 py-5">
-      <div className="flex flex-col md:flex-row md:items-center justify-between">
-        <div className="flex items-center">
-          <Link href="/" className="text-3xl font-semibold">
+    <nav className="lg:mb-16 mb-12 py-5 fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-sm">
+      <div className="flex flex-col md:flex-row items-center justify-center max-w-[900px] mx-auto px-6 gap-y-4 md:gap-y-0 md:gap-x-8">
+        <a href="#home" className="font-['Playfair_Display'] text-6xl font-semibold text-center">
+          <GradientText
+            colors={["#40ffaa", "#FF4D4D", "#40ffaa", "#D71414", "#40ffaa"]}
+            animationSpeed={5}
+            showBorder={false}
+            className="font-['Playfair_Display'] text-6xl font-semibold"
+          >
             {metaData.title}
-          </Link>
-        </div>
-        <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
+          </GradientText>
+        </a>
+        <div className="flex flex-row gap-4 items-center">
           {Object.entries(navItems).map(([path, { name }]) => (
-            <Link
+            <a
               key={path}
               href={path}
-              className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative"
+              onClick={e => {
+                e.preventDefault();
+                const target = document.querySelector(path);
+                if (target && window.lenis) {
+                  window.lenis.scrollTo(target, { offset: 100}); // adjust offset for navbar height
+                }
+              }}
+              className="mt-10 font-['Poppins'] text-white transition-all hover:text-blue-800 dark:hover:text-blue-200 flex align-middle relative"
             >
               {name}
-            </Link>
+            </a>
           ))}
-          <ThemeSwitch />
         </div>
       </div>
     </nav>

@@ -1,6 +1,6 @@
 export const metaData = {
   baseUrl: "https://neilvarshney.com/",
-  title: "Neil Varshney's Website",
+  title: "Neil Varshney",
   name: "Neil Varshney",
   ogImage: "/opengraph-image.png",
   description:
