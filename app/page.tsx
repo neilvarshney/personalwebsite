@@ -4,7 +4,7 @@ import Image from "next/image";
 import { socialLinks } from "./lib/config";
 import { metaData } from "./lib/config";
 import ScrollReveal from './components/scroll-reveal';
-import LenisProvider from "./components/LenisProvider";
+import LenisProvider from './components/LenisProvider';
 
 declare global {
   interface Window {
