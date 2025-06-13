@@ -8,7 +8,7 @@ export const metaData = {
 };
 
 export const socialLinks = {
-  github: "https://github.com/neilvarshney/personalwebsite",
+  github: "https://github.com/neilvarshney/",
   instagram: "https://www.instagram.com/neil.varshney/",
   linkedin: "https://www.linkedin.com/in/neil-varshney/",
   email: "mailto:neilvarshney@cmail.carleton.ca",

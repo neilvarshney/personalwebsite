@@ -68,8 +68,12 @@ export default function Page() {
                   <a className="!text-green-500 !font-extrabold underline decoration hover:decoration transition-all duration-300" href="https://carleton.ca/" target="_blank">
                       Carleton University
                   </a>
-                  , specializing in Computer and Internet 
-                  Security. I'm constantly exploring the latest in network 
+                  , specializing in 
+                  {" "}
+                  <a className="!text-green-500 !font-extrabold">
+                    Computer and Internet Security
+                  </a>
+                  . I'm constantly exploring the latest in network 
                   defense, cryptography, and secure software development.
                 </p>
               </FadeIn>
