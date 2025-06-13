@@ -22,7 +22,7 @@ export default function GradientText({
 
     return (
         <div
-            className={`relative flex items-center justify-center rounded-[1.25rem] font-medium transition-shadow duration-500 py-1 ${className}`}
+            className={`relative flex items-center justify-center rounded-[1.25rem] transition-shadow duration-500 py-1 ${className}`}
         >
             {showBorder && (
                 <div

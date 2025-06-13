@@ -8,6 +8,7 @@ import LenisProvider from './components/LenisProvider';
 import FadeIn from './components/fade-in';
 import ScrollFloat from './components/scroll-reveal';
 import { TypeAnimation } from 'react-type-animation';
+import { hover } from "framer-motion";
 
 declare global {
   interface Window {
@@ -22,7 +23,7 @@ export default function Page() {
         {/* Home Section */}
         <section id="home" className="min-h-screen flex items-center justify-center pt-20 pb-24">
           <div className="flex flex-col items-center">
-            <FadeIn delay={0.6}>
+            <FadeIn delay={1.4}>
               <a href={socialLinks.linkedin} target="_blank">
                 <Image
                   src="/profile.png"
@@ -36,38 +37,85 @@ export default function Page() {
               </a>
             </FadeIn>
             <div className="">
-              <FadeIn delay={0.6}>
+              <FadeIn delay={1.4}>
                 <TypeAnimation
                     sequence={[
                       'Neil Varshney',
                       1000, 
-                      'A Coder',
+                      'A Coder.',
                       1000,
-                      'A Programmer',
+                      'A Programmer.',
                       1000,
-                      'A Developer',
+                      'A Developer.',
                       1000
                     ]}
                     wrapper="span"
                     speed={1}
-                    style={{ textDecoration: 'underline', textDecorationColor: 'red', color: "white", fontSize: '3rem', display: 'inline-block', fontFamily: "Poppins", fontWeight: "bold" }}
+                    style={{textDecoration: 'underline', textDecorationColor: 'red', color: "white", fontSize: '3rem', display: 'inline-block', fontFamily: "Poppins", fontWeight: "bold" }}
                     repeat={Infinity}
                   />
               </FadeIn>
             </div>
             <div className="text-center prose prose-neutral dark:prose-invert font-['Poppins']">
-              <FadeIn delay={0.8}>
+              <FadeIn delay={1.6}>
                 <p>
-                  I'm a second-year Computer Science student at Carleton University, specializing in Computer and Internet 
+                  I'm a 
+                  {" "}
+                  <a className="!text-green-500 !font-extrabold">
+                      2nd-Year Computer Science student at
+                  </a>
+                  {" "}
+                  <a className="!text-green-500 !font-extrabold underline decoration hover:decoration transition-all duration-300" href="https://carleton.ca/" target="_blank">
+                      Carleton University
+                  </a>
+                  , specializing in Computer and Internet 
                   Security. I'm constantly exploring the latest in network 
                   defense, cryptography, and secure software development.
                 </p>
               </FadeIn>
-              <FadeIn delay={1.0}>
+              <FadeIn delay={1.8}>
                 <p>
-                  I'm actively seeking internship opportunities in cybersecurity or software development throughout the year 
+                  I'm 
+                  {" "}
+                  <a className="!text-green-500 !font-extrabold">
+                    actively seeking internship opportunities
+                  </a> 
+                  {" "}
+                  in 
+                  {" "}
+                  <a className="!text-green-500 !font-extrabold">
+                    cybersecurity or software development
+                  </a> 
+                  {" "}
                   where I can apply my academic knowledge and contribute to real-world security solutions. Feel 
-                  free to explore my projects or connect with me!
+                  free to explore my 
+                  {" "}
+                  <a 
+                    href="#projects" 
+                    className="underline decoration hover:decoration transition-all duration-300"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const target = document.querySelector('#projects');
+                      if (target && window.lenis) {
+                        window.lenis.scrollTo(target, { offset: 300});
+                      }
+                    }}
+                  >
+                    projects
+                  </a>
+                  {" "}
+
+                  or
+
+                  {" "}
+                  <a 
+                    href="https://www.linkedin.com/in/neil-varshney/" 
+                    className="underline decoration hover:decoration transition-all duration-300"
+                    target="_blank"
+                  >
+                      connect with me!
+                  </a>
+                  {" "}
                 </p>
               </FadeIn>
             </div>
