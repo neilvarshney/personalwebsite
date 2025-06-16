@@ -184,8 +184,12 @@ export function Dock() {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element && window.lenis) {
-      window.lenis.scrollTo(element, { offset: 0 });
+    if (element && window.lenis && sectionId == 'home') {
+      window.lenis.scrollTo(element, { offset: -100 });
+    }
+    
+    else if (element && window.lenis) {
+      window.lenis.scrollTo(element, { offset: 0});
     }
   };
 
@@ -203,7 +207,7 @@ export function Dock() {
             onClick={() => scrollToSection(section.id)}
             className={`px-4 py-2 rounded-full transition-all duration-200 ${
               activeSection === section.id
-                ? "bg-green-500 text-white"
+                ? "bg-[#548ae8] text-white"
                 : "text-gray-300 hover:text-white hover:bg-gray-700"
             }`}
           >
@@ -214,3 +218,5 @@ export function Dock() {
     </motion.div>
   );
 }
+
+export default Dock;

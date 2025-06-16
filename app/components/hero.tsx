@@ -3,6 +3,14 @@ import { TypeAnimation } from "react-type-animation";
 import { FadeIn } from "./fade-in";
 import { socialLinks } from "../lib/config";
 
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element && window.lenis) {
+    window.lenis.scrollTo(element, { offset: 0 });
+  }
+};
+
 export function Hero() {
   return (
     <div className="flex flex-col items-center">
@@ -24,19 +32,19 @@ export function Hero() {
           <TypeAnimation
             sequence={[
               "Neil Varshney",
-              1000,
+              2000,
               "A Coder.",
-              1000,
+              2000,
               "A Programmer.",
-              1000,
+              2000,
               "A Developer.",
-              1000,
+              2000,
             ]}
             wrapper="span"
             speed={1}
             style={{
               textDecoration: "underline",
-              textDecorationColor: "red",
+              textDecorationColor: "#548ae8",
               color: "white",
               fontSize: "3rem",
               display: "inline-block",
@@ -51,11 +59,11 @@ export function Hero() {
         <FadeIn delay={1.6}>
           <p>
             I'm a{" "}
-            <span className="text-green-500 font-extrabold">
+            <span className="text-[#548ae8] font-extrabold">
               2nd-Year Computer Science student at
             </span>{" "}
             <a
-              className="text-green-500 font-extrabold underline decoration hover:decoration transition-all duration-300"
+              className="text-[#548ae8]  font-extrabold underline decoration hover:decoration transition-all duration-300"
               href="https://carleton.ca/"
               target="_blank"
               rel="noopener noreferrer"
@@ -63,7 +71,7 @@ export function Hero() {
               Carleton University
             </a>
             , specializing in{" "}
-            <span className="text-green-500 font-extrabold">
+            <span className="text-[#548ae8] font-extrabold">
               Computer and Internet Security
             </span>
             . I'm constantly exploring the latest in network defense, cryptography,
@@ -73,11 +81,11 @@ export function Hero() {
         <FadeIn delay={1.8}>
           <p>
             I'm{" "}
-            <span className="text-green-500 font-extrabold">
+            <span className="text-[#548ae8] font-extrabold">
               actively seeking internship opportunities
             </span>{" "}
             in{" "}
-            <span className="text-green-500 font-extrabold">
+            <span className="text-[#548ae8] font-extrabold">
               cybersecurity or software development
             </span>{" "}
             where I can apply my academic knowledge and contribute to real-world
@@ -85,13 +93,7 @@ export function Hero() {
             <a
               href="#projects"
               className="underline decoration hover:decoration transition-all duration-300"
-              onClick={(e) => {
-                e.preventDefault();
-                const target = document.querySelector("#projects");
-                if (target && window.lenis) {
-                  window.lenis.scrollTo(target, { offset: 300 });
-                }
-              }}
+              onClick={() => scrollToSection('projects')}
             >
               projects
             </a>{" "}

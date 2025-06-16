@@ -42,12 +42,12 @@ export function Contact() {
                   <span>GitHub</span>
                 </a>
                 <a
-                  href={socialLinks.twitter}
+                  href={socialLinks.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
                 >
-                  <span>Twitter</span>
+                  <span>Instagram</span>
                 </a>
               </div>
             </div>

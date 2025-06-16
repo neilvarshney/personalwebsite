@@ -7,7 +7,7 @@ export function About() {
       <ScrollFloat
         animationDuration={1}
         ease="back.inOut(2)"
-        scrollStart="center bottom+=50%"
+        scrollStart="center bottom+=20%"
         scrollEnd="bottom bottom-=40%"
         stagger={0.1}
       >

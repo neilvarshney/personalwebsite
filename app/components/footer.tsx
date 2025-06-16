@@ -84,10 +84,9 @@ function SocialLink({ href, icon: Icon }) {
 function SocialLinks() {
   return (
     <div className="flex items-center gap-4">
-      <SocialLink href={socialLinks.twitter} icon={FaXTwitter} />
+      <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
       <SocialLink href={socialLinks.github} icon={FaGithub} />
       <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
-      <SocialLink href="/rss.xml" icon={FaRss} />
     </div>
   );
 }
@@ -95,8 +94,8 @@ function SocialLinks() {
 export default function Footer() {
   return (
     <footer className="fixed bottom-0 left-0 right-0 py-2 px-6 bg-white/80 dark:bg-black/80 backdrop-blur-sm text-[#1C1C1C] dark:text-[#D4D4D4] z-50">
-      <div className="max-w-[900px] mx-auto flex justify-between items-center relative h-16">
-        <div>
+      <div className="max-w-100% mx-auto flex justify-between items-center relative h-16">
+        <div className="pl-80">
           <time>© {YEAR}</time>{" "}
           <a
             className="no-underline"
@@ -109,7 +108,9 @@ export default function Footer() {
         <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ bottom: '-20px' }}>
           <Dock />
         </div>
-        <SocialLinks />
+        <div className="pr-80">
+          <SocialLinks />
+        </div>
       </div>
     </footer>
   );

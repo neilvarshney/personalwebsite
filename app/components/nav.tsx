@@ -5,6 +5,7 @@ import GradientText from "./gradient-text";
 import ScrollReveal from './scroll-reveal';
 import { FadeIn } from './fade-in';
 
+
 const scrollToSection = (sectionId: string, offset: number = -100) => {
   const target = document.querySelector(sectionId);
   if (target && window.lenis) {
@@ -27,10 +28,10 @@ export function Navbar() {
             scrollToSection('#home');
           }}>
           <GradientText
-            colors={["#610000", "#262626", "#610000", "#262626", "#610000"]}
+            colors={["#1E3A8A", "#3B82F6", "#1E3A8A", "#3B82F6", "#1E3A8A"]}
             animationSpeed={5}
             showBorder={false}
-            className="font-black font-['Playfair_Display'] text-6xl"
+            className="font-black font-['Poppins'] text-6xl"
           >
             {metaData.title}
           </GradientText>
