@@ -4,11 +4,12 @@ import Lenis from "@studio-freight/lenis";
 
 export default function LenisProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const lenis = new Lenis({
       duration: 0.8,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      easing: (t) => t,
       orientation: 'vertical',
-      smoothWheel: true,
+      smoothWheel: !isTouchDevice,
       infinite: false,
     });
 

@@ -61,7 +61,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased text-white min-h-screen`}>
         <div className="fixed inset-0 -z-10">
-          {/* <Aurora
+          <Aurora
             beamWidth={3}
             beamHeight={30}
             beamNumber={30}
@@ -70,7 +70,7 @@ export default function RootLayout({
             noiseIntensity={1.75}
             scale={0.2}
             rotation={45}
-          /> */}
+          />
         </div>
         <LenisProvider>
           <div className="relative min-h-screen">
