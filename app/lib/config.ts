@@ -1,15 +1,14 @@
 export const metaData = {
-  baseUrl: "https://neilvarshney.com/",
+  baseUrl: "https://yourdomain.com",
   title: "Neil Varshney",
   name: "Neil Varshney",
-  ogImage: "/opengraph-image.png",
+  ogImage: "/og-image.png",
   description:
-    "A clean, fast, and lightweight portfolio template built with Next.js, Vercel, and Tailwind CSS for optimal performance.",
+    "Computer Science student specializing in Computer and Internet Security. Explore my projects and skills.",
 };
 
 export const socialLinks = {
-  github: "https://github.com/neilvarshney/",
-  instagram: "https://www.instagram.com/neil.varshney/",
-  linkedin: "https://www.linkedin.com/in/neil-varshney/",
-  email: "mailto:neilvarshney@cmail.carleton.ca",
+  linkedin: "https://linkedin.com/in/neil-varshney",
+  github: "https://github.com/neilvarshney",
+  twitter: "https://twitter.com/yourusername",
 };

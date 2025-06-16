@@ -3,7 +3,7 @@ import Link from "next/link";
 import { metaData } from "../lib/config";
 import GradientText from "./gradient-text";
 import ScrollReveal from './scroll-reveal';
-import FadeIn from "./fade-in";
+import { FadeIn } from './fade-in';
 
 const scrollToSection = (sectionId: string, offset: number = -100) => {
   const target = document.querySelector(sectionId);

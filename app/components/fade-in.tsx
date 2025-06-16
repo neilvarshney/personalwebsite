@@ -1,47 +1,23 @@
-"use client";
-import React, { useEffect, useRef, ReactNode } from "react";
-import { gsap } from "gsap";
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
 interface FadeInProps {
   children: ReactNode;
-  className?: string;
   delay?: number;
-  duration?: number;
 }
 
-const FadeIn: React.FC<FadeInProps> = ({
-  children,
-  className = "",
-  delay = 0,
-  duration = 1
-}) => {
-  const elementRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const element = elementRef.current;
-    if (!element) return;
-
-    gsap.fromTo(
-      element,
-      {
-        opacity: 0,
-        y: 20
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: duration,
-        delay: delay,
-        ease: "power2.out"
-      }
-    );
-  }, [delay, duration]);
-
+export function FadeIn({ children, delay = 0 }: FadeInProps) {
   return (
-    <div ref={elementRef} className={className}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+        delay,
+        ease: [0.21, 0.47, 0.32, 0.98],
+      }}
+    >
       {children}
-    </div>
+    </motion.div>
   );
-};
-
-export default FadeIn; 
+} 
