@@ -5,6 +5,16 @@ import GradientText from "./gradient-text";
 import ScrollReveal from './scroll-reveal';
 import FadeIn from "./fade-in";
 
+const scrollToSection = (sectionId: string, offset: number = -100) => {
+  const target = document.querySelector(sectionId);
+  if (target && window.lenis) {
+    window.lenis.scrollTo(target, { 
+      offset,
+      duration: 0.8,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+    });
+  }
+};
 
 export function Navbar() {
   return (
@@ -12,12 +22,9 @@ export function Navbar() {
       <FadeIn delay={1.5}>
       <div className="text-center">
         <a href="#home"
-          onClick={e => {
+          onClick={(e) => {
             e.preventDefault();
-            const target = document.querySelector('#home');
-            if (target && window.lenis) {
-              window.lenis.scrollTo(target, { offset: -100}); // adjust offset for navbar height
-            }
+            scrollToSection('#home');
           }}>
           <GradientText
             colors={["#610000", "#262626", "#610000", "#262626", "#610000"]}
