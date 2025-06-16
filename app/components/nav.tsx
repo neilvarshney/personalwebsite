@@ -31,7 +31,7 @@ export function Navbar() {
             colors={["#1E3A8A", "#3B82F6", "#1E3A8A", "#3B82F6", "#1E3A8A"]}
             animationSpeed={5}
             showBorder={false}
-            className="font-black font-['Poppins'] text-6xl"
+            className="font-black font-['Poppins'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
           >
             {metaData.title}
           </GradientText>
