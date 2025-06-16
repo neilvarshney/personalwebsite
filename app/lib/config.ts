@@ -3,6 +3,7 @@ export const metaData = {
   title: "Neil Varshney",
   name: "Neil Varshney",
   firstName: "Neil",
+  lastName: "Varshney",
   ogImage: "/og-image.png",
   description:
     "Computer Science student specializing in Computer and Internet Security. Explore my projects and skills.",
