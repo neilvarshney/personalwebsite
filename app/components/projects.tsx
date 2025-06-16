@@ -1,4 +1,3 @@
-import { FadeIn } from "./fade-in";
 import { ScrollFloat } from "./scroll-float";
 import Image from "next/image";
 
@@ -16,7 +15,7 @@ const projects = [
     description:
       "An intelligent chatbot that helps anime enthusiasts discover new shows, get recommendations, and answer their anime-related questions. Built with React and powered by AI, this chatbot provides personalized anime suggestions based on user preferences and interests.",
     technologies: ["Python", "JavaScript", "React", "Fast API", "SQLite", "HTML/CSS", "L.L.M",],
-    image: "/photos/photo1.jpg",
+    image: "/animehaven.png",
     link: "https://github.com/neilvarshney/Anime-Haven",
   },
   {
@@ -25,7 +24,7 @@ const projects = [
       "A modern, responsive personal portfolio website built with Next.js, showcasing my work, skills, and experience as a Computer Science student.",
     technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Node.js", "HTML/CSS"],
     image: "/portfolio.png",
-    link: "https://github.com/yourusername/portfolio",
+    link: "https://neilvarshney.vercel.app",
   },
 ];
 

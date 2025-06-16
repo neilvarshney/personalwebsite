@@ -4,7 +4,7 @@ import { socialLinks } from "../lib/config";
 
 export function Contact() {
   return (
-    <div className="prose prose-neutral dark:prose-invert font-['Poppins']">
+    <div className="w-full font-['Poppins']">
       <ScrollFloat
         animationDuration={1}
         ease="back.inOut(2)"
@@ -12,47 +12,16 @@ export function Contact() {
         scrollEnd="bottom bottom-=40%"
         stagger={0.1}
       >
-        <h2 className="text-4xl font-bold mb-8">Contact</h2>
-        <div className="space-y-8">
-          <p className="text-lg">
-            I'm always open to discussing new projects, creative ideas, or
-            opportunities to be part of your vision. Feel free to reach out to me
-            through any of the following channels:
+        <h2 className="text-4xl mb-8"><span className="font-black">Contact</span></h2>
+        <div className="space-y-20 w-full">
+          <p className="pr-64 text-lg text-center">
+
+            Feel free to reach out to me about anything, whether that be new projects, creative ideas,
+            or about my interests - I am open to everything!
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold text-green-500">
-                Let's Connect
-              </h3>
-              <div className="space-y-2">
-                <a
-                  href={socialLinks.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  <span>LinkedIn</span>
-                </a>
-                <a
-                  href={socialLinks.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  <span>GitHub</span>
-                </a>
-                <a
-                  href={socialLinks.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  <span>Instagram</span>
-                </a>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold text-green-500">
+          <div className="w-full flex justify-center items-center gap-6">
+            <div className="space-y-4 w-full max-w-lg mx-auto">
+              <h3 className="text-2xl font-semibold text-green-500 text-center">
                 Send Me a Message
               </h3>
               <form className="space-y-4">
@@ -64,10 +33,11 @@ export function Contact() {
                     Name
                   </label>
                   <input
+                    placeholder="ex: John Doe"
                     type="text"
                     id="name"
                     name="name"
-                    className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-green-500 focus:ring-green-500"
+                    className="pl-3 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-green-500 focus:ring-green-500"
                   />
                 </div>
                 <div>
@@ -78,10 +48,11 @@ export function Contact() {
                     Email
                   </label>
                   <input
+                    placeholder="ex: example123@gmail.com"
                     type="email"
                     id="email"
                     name="email"
-                    className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-green-500 focus:ring-green-500"
+                    className="pl-3 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-green-500 focus:ring-green-500"
                   />
                 </div>
                 <div>
@@ -92,15 +63,16 @@ export function Contact() {
                     Message
                   </label>
                   <textarea
+                  placeholder="Enter message here..."
                     id="message"
                     name="message"
                     rows={4}
-                    className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-green-500 focus:ring-green-500"
+                    className="pl-3 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-green-500 focus:ring-green-500"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors duration-200"
+                  className="font-bold w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-[#548ae8] transition-colors duration-200"
                 >
                   Send Message
                 </button>
