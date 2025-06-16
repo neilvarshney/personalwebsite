@@ -95,7 +95,7 @@ export default function Footer() {
   return (
     <footer className="fixed bottom-0 left-0 right-0 py-2 px-6 bg-white/80 dark:bg-black/80 backdrop-blur-sm text-[#1C1C1C] dark:text-[#D4D4D4] z-50">
       <div className="max-w-100% mx-auto flex justify-between items-center relative h-16">
-        <div className="">
+        <div className="text-xs">
           <time>© {YEAR}</time>{" "}
           <a
             className="no-underline"

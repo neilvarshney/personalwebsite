@@ -198,14 +198,14 @@ export function Dock() {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-[600px] sm:w-auto"
+      className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 w-[90%] max-w-[500px] sm:w-auto"
     >
-      <div className="bg-gray-800/80 backdrop-blur-md rounded-full px-2 sm:px-4 py-1 sm:py-2 flex items-center justify-center flex-wrap sm:flex-nowrap gap-1 sm:gap-4">
+      <div className="bg-gray-800/90 backdrop-blur-md rounded-full px-0.5 sm:px-4 py-0.5 sm:py-2 flex items-center justify-center space-x-0.5 sm:space-x-4 shadow-lg">
         {sections.map((section) => (
           <button
             key={section.id}
             onClick={() => scrollToSection(section.id)}
-            className={`px-2 sm:px-4 py-1 sm:py-2 rounded-full transition-all duration-200 text-sm sm:text-base ${
+            className={`px-1 sm:px-4 py-0.5 sm:py-2 rounded-full transition-all duration-200 text-[10px] sm:text-base whitespace-nowrap ${
               activeSection === section.id
                 ? "bg-[#548ae8] text-white"
                 : "text-gray-300 hover:text-white hover:bg-gray-700"
