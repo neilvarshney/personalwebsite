@@ -4,28 +4,28 @@ import Image from "next/image";
 
 const projects = [
   {
+    title: "Fake News Detector",
+    description:
+      "A machine learning-powered web application that helps users identify potentially fake news articles using BERT and Logistic Regression.",
+    technologies: ["Python", "JavaScript", "React", "SQLite", "HTML/CSS", "M.L", "Scikit-Learn"],
+    image: "/fakenewsdetector.png",
+    link: "https://github.com/neilvarshney/Fake-News-Detector",
+  },
+  {
+    title: "Anime Haven",
+    description:
+      "An intelligent chatbot that helps anime enthusiasts discover new shows, get recommendations, and answer their anime-related questions. Built with React and powered by AI, this chatbot provides personalized anime suggestions based on user preferences and interests.",
+    technologies: ["Python", "JavaScript", "React", "Fast API", "SQLite", "HTML/CSS", "L.L.M",],
+    image: "/photos/photo1.jpg",
+    link: "https://github.com/neilvarshney/Anime-Haven",
+  },
+  {
     title: "Portfolio Website",
     description:
-      "A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features smooth animations and a clean design.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    image: "/profile.png",
+      "A modern, responsive personal portfolio website built with Next.js, showcasing my work, skills, and experience as a Computer Science student.",
+    technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Node.js", "HTML/CSS"],
+    image: "/portfolio.png",
     link: "https://github.com/yourusername/portfolio",
-  },
-  {
-    title: "Network Security Tool",
-    description:
-      "A Python-based network security tool that monitors and analyzes network traffic for potential threats and vulnerabilities.",
-    technologies: ["Python", "Wireshark", "Network Security", "Linux"],
-    image: "/logo.png",
-    link: "https://github.com/yourusername/network-security-tool",
-  },
-  {
-    title: "E-commerce Platform",
-    description:
-      "A full-stack e-commerce platform with secure payment processing, user authentication, and inventory management.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "/photos/photo1.jpg",
-    link: "https://github.com/yourusername/ecommerce",
   },
 ];
 
@@ -39,7 +39,7 @@ export function Projects() {
         scrollEnd="bottom bottom-=40%"
         stagger={0.1}
       >
-        <h2 className="text-4xl font-bold mb-8">Projects</h2>
+        <h2 className="text-4xl mb-8"><span className="font-black">Projects</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div

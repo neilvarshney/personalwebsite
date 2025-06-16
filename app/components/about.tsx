@@ -12,7 +12,7 @@ export function About() {
         scrollEnd="bottom bottom-=40%"
         stagger={0.1}
       >
-        <h2 className="text-4xl font-bold mb-8">About Me</h2>
+        <h2 className="text-4xl mb-8"><span className="font-black">About</span></h2>
         <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
           <div className="lg:w-2/3 space-y-6">
             <p className="text-lg">
@@ -20,7 +20,7 @@ export function About() {
               <strong>Neil Varshney</strong> a passionate Computer Science student at Carleton University, focusing on
               Computer and Internet Security. I have an ambition for full-stack development, artifical intelligence, and
               cybersecuirty. I have several projects that are currently in the making, so stay tuned! Aside from my academic and technical interests,
-              I have a serious passion for soccer (Hala Madrid!), FPS video games, and underground music.
+              I have a serious passion for soccer (Hala Madrid!), FPS video games, and music.
             </p>      
           
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-8 text-lg">
@@ -46,8 +46,8 @@ export function About() {
             <a 
               href="https://open.spotify.com/playlist/2l5YCa2uCkqmxdsubl68Fi?si=87e9d7da69bb4d90" 
               target="_blank" 
-              rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center p-15 bg-green-500 rounded-lg shadow-lg hover:bg-green-900 transition-colors duration-200"
+              // rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center p-7 bg-[#548ae8] rounded-lg shadow-lg hover:bg-green-600 transition-colors duration-500"
             >
               <FaSpotify size={60} className="text-white mb-4" />
               <span className="text-white text-lg font-semibold">Listen to My Playlist</span>

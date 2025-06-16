@@ -3,20 +3,20 @@ import { ScrollFloat } from "./scroll-float";
 
 const skills = [
   {
-    category: "Programming Languages",
-    items: ["Python", "Java", "JavaScript", "TypeScript", "C++", "SQL"],
+    category: "Front-End Development",
+    items: ["JavaScript", "TypeScript", "React.js", "Next.js", "Tailwind CSS", "CSS", "HTML"],
   },
   {
-    category: "Web Development",
-    items: ["React", "Next.js", "Node.js", "HTML5", "CSS3", "Tailwind CSS"],
+    category: "Other Languages & Tools",
+    items: ["Python", "Java", "C++", "C", "GitHub", "Git", "npm", "Unix/Linux", "VS Code"],
   },
   {
-    category: "Security Tools",
-    items: ["Wireshark", "Metasploit", "Nmap", "Burp Suite", "Kali Linux"],
+    category: "Back-End Development",
+    items: ["SQLite", "Flask", "FastAPI", "RESTful APIs", "Node.js", "Deno"],
   },
   {
-    category: "Other Technologies",
-    items: ["Git", "Docker", "Linux", "AWS", "MongoDB", "PostgreSQL"],
+    category: "Machine Learning & AI",
+    items: ["PyTorch", "Pandas", "NumPy", "Scikit-learn", "Natural Language Processing (NLP)"],
   },
 ];
 
@@ -30,8 +30,8 @@ export function Skills() {
         scrollEnd="bottom bottom-=40%"
         stagger={0.1}
       >
-        <h2 className="text-4xl font-bold mb-8">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <h2 className="text-4xl mb-8"><span className="font-black">Skills</span></h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-30 gap-y-8">
           {skills.map((skillGroup, index) => (
             <div key={index} className="space-y-4">
               <h3 className="text-2xl font-semibold text-green-500">
