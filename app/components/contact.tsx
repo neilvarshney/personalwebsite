@@ -2,6 +2,27 @@ import { useState } from "react";
 import { FadeIn } from "./fade-in";
 import { ScrollFloat } from "./scroll-float";
 import emailjs from '@emailjs/browser';
+import { metaData, socialLinks } from "app/lib/config";
+import {
+  FaXTwitter,
+  FaGithub,
+  FaInstagram,
+  FaRss,
+  FaLinkedinIn,
+} from "react-icons/fa6";
+
+function SocialLink({ href, icon: Icon }) {
+  return (
+    <a 
+      href={href} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-white transition-colors duration-300"
+    >
+      <Icon size={40}/>
+    </a>
+  );
+}
 
 export function Contact() {
   const [name, setName] = useState("");
@@ -131,6 +152,11 @@ export function Contact() {
                 </button>
               </form>
             </div>
+          </div>
+          <div className="flex justify-center items-center gap-10">
+            <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
+            <SocialLink href={socialLinks.github} icon={FaGithub} />
+            <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
           </div>
         </div>
       </ScrollFloat>
