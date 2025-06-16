@@ -6,7 +6,7 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
   useEffect(() => {
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const lenis = new Lenis({
-      duration: 0.5,
+      duration: isTouchDevice ? 0.25 : 0.5,
       easing: (t) => t,
       orientation: 'vertical',
       smoothWheel: !isTouchDevice,
