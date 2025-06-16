@@ -189,7 +189,7 @@ export function Dock() {
     }
     
     else if (element && window.lenis) {
-      window.lenis.scrollTo(element, { offset: 0});
+      window.lenis.scrollTo(element, { offset: 100});
     }
   };
 
