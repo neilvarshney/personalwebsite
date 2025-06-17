@@ -171,7 +171,10 @@ export function Dock() {
           }
         });
       },
-      { threshold: 0.5 }
+      { 
+        threshold: 0.3,
+        rootMargin: '-20% 0px -20% 0px'
+      }
     );
 
     sections.forEach((section) => {

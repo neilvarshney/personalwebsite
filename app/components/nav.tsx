@@ -42,6 +42,4 @@ export function Navbar() {
   );
 }
 
-// ad links github linked in contact
-// fix for mobile useres
 // add education page

@@ -72,9 +72,9 @@ export function Contact() {
         scrollEnd="bottom bottom-=40%"
         stagger={0.1}
       >
-        <h2 className="text-4xl mb-8 text-center"><span className="font-black">Contact</span></h2>
+        <h2 className="text-4xl mb-8"><span className="font-black">Contact</span></h2>
         <div className="space-y-20 w-full">
-          <p className="text-lg text-center">
+          <p className="text-lg text-left">
             Feel free to reach out to me about anything, whether that be new projects, creative ideas,
             or about my interests - I am open to everything!
           </p>
