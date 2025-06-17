@@ -12,5 +12,5 @@ export const metaData = {
 export const socialLinks = {
   linkedin: "https://linkedin.com/in/neil-varshney",
   github: "https://github.com/neilvarshney",
-  instagram: "https://www.instagram.com/neil.varshney"
+  email: "mailto:neilvarshney@cmail.carleton.ca"
 };

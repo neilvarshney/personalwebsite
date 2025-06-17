@@ -172,8 +172,7 @@ export function Dock() {
         });
       },
       { 
-        threshold: 0.3,
-        rootMargin: '-20% 0px -20% 0px'
+        threshold: 0.5
       }
     );
 

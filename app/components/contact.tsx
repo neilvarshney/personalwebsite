@@ -9,6 +9,7 @@ import {
   FaInstagram,
   FaRss,
   FaLinkedinIn,
+  FaEnvelope,
 } from "react-icons/fa6";
 
 function SocialLink({ href, icon: Icon }) {
@@ -154,7 +155,7 @@ export function Contact() {
             </div>
           </div>
           <div className="flex justify-center items-center gap-10">
-            <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
+            <SocialLink href={socialLinks.email} icon={FaEnvelope} />
             <SocialLink href={socialLinks.github} icon={FaGithub} />
             <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
           </div>

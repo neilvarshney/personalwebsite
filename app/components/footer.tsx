@@ -7,6 +7,8 @@ import {
   FaInstagram,
   FaRss,
   FaLinkedinIn,
+  FaMailchimp,
+  FaEnvelope,
 } from "react-icons/fa6";
 import { TbMailFilled } from "react-icons/tb";
 import { metaData, socialLinks } from "app/lib/config";
@@ -84,7 +86,7 @@ function SocialLink({ href, icon: Icon }) {
 function SocialLinks() {
   return (
     <div className="flex items-center gap-4">
-      <SocialLink href={socialLinks.instagram} icon={FaInstagram} />
+      <SocialLink href={socialLinks.email} icon={FaEnvelope} />
       <SocialLink href={socialLinks.github} icon={FaGithub} />
       <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
     </div>
