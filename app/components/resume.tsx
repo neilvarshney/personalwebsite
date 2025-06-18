@@ -12,7 +12,7 @@ export function Resume() {
             >
                 <h2 className="text-4xl mb-2"><span className="font-black">Resume</span></h2>
                 <div className="flex justify-center">
-                    <iframe src="Neil_Varshney_Resume.pdf" className="flex justify-center w-[1200px] h-[800px] border-none"></iframe>
+                    <iframe src="Neil_Varshney_Resume.pdf" className="flex justify-center w-[950px] h-[800px] border-none"></iframe>
                 </div>
             </ScrollFloat>
         </div>
