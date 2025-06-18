@@ -45,7 +45,7 @@ export default function Home() {
           <Resume />
         </section>
         
-
+         
         <section id="contact" className="py-90 flex flex-col items-start">
           <Contact />
         </section>
