@@ -21,7 +21,7 @@ function SocialLink({ href, icon: Icon }) {
       rel="noopener noreferrer"
       className="text-gray-400 hover:text-white transition-colors duration-300"
     >
-      <Icon size={28} />
+      <Icon size={24} />
     </a>
   );
 }
