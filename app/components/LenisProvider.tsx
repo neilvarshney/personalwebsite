@@ -4,16 +4,12 @@ import Lenis from "@studio-freight/lenis";
 
 export default function LenisProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-    
-    // Disable browser scroll restoration to prevent conflicts
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
 
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const lenis = new Lenis({
       duration: isTouchDevice ? 0.125 : 0.8,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+
       orientation: 'vertical',
       smoothWheel: !isTouchDevice,
       infinite: false,
@@ -21,9 +17,6 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
 
     // Expose lenis to window object
     window.lenis = lenis;
-
-    // Ensure we start at the top of the page
-    lenis.scrollTo(0, { immediate: true });
 
     function raf(time: number) {
       lenis.raf(time);

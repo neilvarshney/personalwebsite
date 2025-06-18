@@ -164,13 +164,10 @@ const sections = [
 
 export function Dock() {
   const [activeSection, setActiveSection] = useState("home");
-  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (!isInitialized) return; // Don't update active section until initialized
-        
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
@@ -184,8 +181,6 @@ export function Dock() {
     );
 
     const updateActiveSectionOnScroll = () => {
-      if (!isInitialized) return; // Don't update active section until initialized
-      
       const scrollPosition = window.scrollY + window.innerHeight / 2;
       
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -211,9 +206,6 @@ export function Dock() {
       });
       
       window.addEventListener('scroll', updateActiveSectionOnScroll, { passive: true });
-      
-      // Mark as initialized after a short delay
-      setTimeout(() => setIsInitialized(true), 100);
     }, 100);
 
     return () => {
@@ -221,7 +213,7 @@ export function Dock() {
       observer.disconnect();
       window.removeEventListener('scroll', updateActiveSectionOnScroll);
     };
-  }, [isInitialized]);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
