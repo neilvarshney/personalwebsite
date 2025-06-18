@@ -175,16 +175,44 @@ export function Dock() {
         });
       },
       { 
-        threshold: 0.5
+        threshold: 0.1,
+        rootMargin: '-10% 0px -10% 0px'
       }
     );
 
-    sections.forEach((section) => {
-      const element = document.getElementById(section.id);
-      if (element) observer.observe(element);
-    });
+    const updateActiveSectionOnScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const element = document.getElementById(sections[i].id);
+        if (element) {
+          const elementTop = element.offsetTop;
+          const elementBottom = elementTop + element.offsetHeight;
+          
+          if (scrollPosition >= elementTop && scrollPosition <= elementBottom) {
+            setActiveSection(sections[i].id);
+            break;
+          }
+        }
+      }
+    };
 
-    return () => observer.disconnect();
+    const timeoutId = setTimeout(() => {
+      sections.forEach((section) => {
+        const element = document.getElementById(section.id);
+        if (element) {
+          observer.observe(element);
+        }
+      });
+      
+      window.addEventListener('scroll', updateActiveSectionOnScroll, { passive: true });
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+      window.removeEventListener('scroll', updateActiveSectionOnScroll);
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -203,9 +231,9 @@ export function Dock() {
       initial={{ y: 0, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="relative z-50 w-full max-w-[90vw] mx-auto" // Changed to full width
+      className="relative z-50 w-full max-w-[90vw] mx-auto"
     >
-      <div className="bg-gray-800/90 backdrop-blur-md rounded-full px-2 py-2 flex items-center justify-center flex-wrap gap-1 sm:gap-2 shadow-lg"> {/* Changed to flex-wrap */}
+      <div className="bg-gray-800/90 backdrop-blur-md rounded-full px-2 py-2 flex items-center justify-center flex-wrap gap-1 sm:gap-2 shadow-lg">
         {sections.map((section) => (
           <button
             key={section.id}
@@ -222,7 +250,6 @@ export function Dock() {
       </div>
     </motion.div>
   );
-
 }
 
 export default Dock;
