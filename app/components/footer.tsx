@@ -96,22 +96,47 @@ function SocialLinks() {
 export default function Footer() {
   return (
     <footer className="fixed bottom-0 left-0 right-0 py-2 px-6 bg-black/80 backdrop-blur-sm text-[#D4D4D4] z-50">
-      <div className="max-w-100% mx-auto flex justify-between items-center relative h-16">
-        <div className="text-[0.6rem] hidden md:block">
-          <time>© {YEAR}</time>{" "}
-          <a
-            className="no-underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {metaData.lastName}
-          </a>
+      <div className="max-w-100% mx-auto flex flex-col items-center relative">
+        {/* Desktop layout - dock floats above footer */}
+        <div className="hidden md:flex justify-between items-center w-full h-16">
+          <div className="text-[0.6rem]">
+            <time>© {YEAR}</time>{" "}
+            <a
+              className="no-underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {metaData.lastName}
+            </a>
+          </div>
+          <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ bottom: '-20px' }}>
+            <Dock />
+          </div>
+          <div>
+            <SocialLinks />
+          </div>
         </div>
-        <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ bottom: '-20px' }}>
-          <Dock />
-        </div>
-        <div className="hidden md:block">
-          <SocialLinks />
+        
+        {/* Mobile layout - dock stays within footer */}
+        <div className="md:hidden flex flex-col items-center w-full pb-4">
+          <div className="mb-3">
+            <Dock />
+          </div>
+          <div className="flex justify-between items-center w-full">
+            <div className="text-[0.6rem]">
+              <time>© {YEAR}</time>{" "}
+              <a
+                className="no-underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {metaData.lastName}
+              </a>
+            </div>
+            <div>
+              <SocialLinks />
+            </div>
+          </div>
         </div>
       </div>
     </footer>
