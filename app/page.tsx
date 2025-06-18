@@ -53,7 +53,3 @@ export default function Home() {
 
   );
 }
-
-// chroma grid for porjects
-//stepper for conatct me page
-// profile card for pfp

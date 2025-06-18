@@ -18,6 +18,11 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
     // Expose lenis to window object
     window.lenis = lenis;
 
+    // Ensure we start at the top of the page on reload
+    if (window.location.pathname === '/') {
+      lenis.scrollTo(0, { immediate: true });
+    }
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
