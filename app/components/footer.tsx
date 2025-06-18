@@ -2,73 +2,16 @@
 
 import React from "react";
 import {
-  FaXTwitter,
   FaGithub,
-  FaInstagram,
-  FaRss,
   FaLinkedinIn,
-  FaMailchimp,
   FaEnvelope,
 } from "react-icons/fa6";
-import { TbMailFilled } from "react-icons/tb";
 import { metaData, socialLinks } from "app/lib/config";
-import { VscHome, VscArchive, VscAccount, VscSettingsGear, VscBook} from 'react-icons/vsc';
+
 import { Dock } from './dock';
 
 const YEAR = new Date().getFullYear();
 
-const dockItems = [
-  { 
-    icon: <VscHome size={15} className="text-blue-500 hover:text-blue-400" />, 
-    label: 'Home', 
-    onClick: () => {
-      const target = document.querySelector('#home');
-      if (target && window.lenis) {
-        window.lenis.scrollTo(target, { offset: -100 });
-      }
-    }
-  },
-  { 
-    icon: <VscAccount size={15} className="text-orange-500 hover:text-orange-400" />, 
-    label: 'Profile', 
-    onClick: () => {
-      const target = document.querySelector('#education');
-      if (target && window.lenis) {
-        window.lenis.scrollTo(target, { offset: 300 });
-      }
-    }
-  },
-  { 
-    icon: <VscArchive size={15} className="text-green-500 hover:text-green-400" />, 
-    label: 'Projects', 
-    onClick: () => {
-      const target = document.querySelector('#projects');
-      if (target && window.lenis) {
-        window.lenis.scrollTo(target, { offset: 300 });
-      }
-    }
-  },
-  { 
-    icon: <VscBook size={15} className="text-purple-500 hover:text-purple-400" />, 
-    label: 'Blog', 
-    onClick: () => {
-      const target = document.querySelector('#blog');
-      if (target && window.lenis) {
-        window.lenis.scrollTo(target, { offset: 300 });
-      }
-    }
-  },
-  { 
-    icon: <VscSettingsGear size={15} className="text-orange-500 hover:text-orange-400" />, 
-    label: 'Photos', 
-    onClick: () => {
-      const target = document.querySelector('#photos');
-      if (target && window.lenis) {
-        window.lenis.scrollTo(target, { offset: 300 });
-      }
-    }
-  },
-];
 
 function SocialLink({ href, icon: Icon }) {
   return (
@@ -78,7 +21,7 @@ function SocialLink({ href, icon: Icon }) {
       rel="noopener noreferrer"
       className="text-gray-400 hover:text-white transition-colors duration-300"
     >
-      <Icon />
+      <Icon size={28} />
     </a>
   );
 }
@@ -99,7 +42,7 @@ export default function Footer() {
       <div className="max-w-100% mx-auto flex flex-col items-center relative">
         {/* Desktop layout - dock floats above footer */}
         <div className="hidden md:flex justify-between items-center w-full h-16">
-          <div className="text-[0.6rem]">
+          <div className="text-sm">
             <time>© {YEAR}</time>{" "}
             <a
               className="no-underline"
