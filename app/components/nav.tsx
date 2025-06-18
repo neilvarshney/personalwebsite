@@ -41,5 +41,3 @@ export function Navbar() {
     </nav>
   );
 }
-
-// add education page

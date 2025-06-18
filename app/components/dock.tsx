@@ -154,6 +154,7 @@ function DockIcon({ children, className = "" }: DockIconProps) {
 const sections = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
+  { id: "education", label: "Education" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
@@ -191,7 +192,7 @@ export function Dock() {
     }
     
     else if (element && window.lenis) {
-      window.lenis.scrollTo(element, { offset: 100});
+      window.lenis.scrollTo(element, { offset: 200});
     }
   };
 
