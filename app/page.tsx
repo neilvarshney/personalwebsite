@@ -41,11 +41,11 @@ export default function Home() {
           <Projects />
         </section>
 
-        {/* <section id="resume" className="py-90 flex flex-col items-start">
+        <section id="resume" className="py-90 flex flex-col items-start">
           <Resume />
         </section>
-         */}
-         
+        
+
         <section id="contact" className="py-90 flex flex-col items-start">
           <Contact />
         </section>
