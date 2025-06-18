@@ -24,9 +24,9 @@ export function Education() {
                         </h1>
                         <h1 className="text-xl">
                             CGPA: <span className="font-bold">10.75/12 (A-)</span>
-                            <a target="_blank" href="Neil_Varshney_Transcript.pdf" className="px-3 py-1 ml-5 bg-gray-800 rounded-full text-sm hover:bg-gray-700 transition-colors duration-200">
-                                Transcript
-                            </a>
+                        </h1>
+                        <h1 className="text-xl">
+                            Awards: <span className="font-bold"> Dean’s List (2x), Chalmers Jack MacKenzie Scholarship, Henry Marshall Tory Scholarship</span>
                         </h1>
                         <div>
                             <h1 className="text-xl font-bold mb-3">Relevant Courses:</h1>

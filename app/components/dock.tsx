@@ -157,6 +157,8 @@ const sections = [
   { id: "education", label: "Education" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
+  { id: "resume", label: "Resume" },
+  // { id: "experience", label: "Experience" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -198,17 +200,17 @@ export function Dock() {
 
   return (
     <motion.div
-      initial={{ y: 100, opacity: 0 }}
+      initial={{ y: 0, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-50 w-[90vw] max-w-[400px] sm:w-auto"
+      className="relative z-50 w-full max-w-[90vw] mx-auto" // Changed to full width
     >
-      <div className="bg-gray-800/90 backdrop-blur-md rounded-full px-[1.5vw] sm:px-4 py-[0.8vw] sm:py-2 flex items-center justify-center space-x-[0.8vw] sm:space-x-4 shadow-lg w-fit mx-auto">
+      <div className="bg-gray-800/90 backdrop-blur-md rounded-full px-2 py-2 flex items-center justify-center flex-wrap gap-1 sm:gap-2 shadow-lg"> {/* Changed to flex-wrap */}
         {sections.map((section) => (
           <button
             key={section.id}
             onClick={() => scrollToSection(section.id)}
-            className={`px-[1.5vw] sm:px-4 py-[0.8vw] sm:py-2 rounded-full transition-all duration-200 text-[2.8vw] sm:text-base whitespace-nowrap ${
+            className={`px-3 py-1 rounded-full transition-all duration-200 text-xs sm:text-sm whitespace-nowrap ${
               activeSection === section.id
                 ? "bg-[#548ae8] text-white"
                 : "text-gray-300 hover:text-white hover:bg-gray-700"
@@ -220,6 +222,7 @@ export function Dock() {
       </div>
     </motion.div>
   );
+
 }
 
 export default Dock;
