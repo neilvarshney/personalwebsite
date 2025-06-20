@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { metaData } from "../lib/config";
 import GradientText from "./gradient-text";
 import { FadeIn } from './fade-in';

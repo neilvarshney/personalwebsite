@@ -7,7 +7,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 import { metaData, socialLinks } from "app/lib/config";
-
+import { FadeIn } from "./fade-in";
 import { Dock } from './dock';
 
 const YEAR = new Date().getFullYear();
@@ -15,14 +15,16 @@ const YEAR = new Date().getFullYear();
 
 function SocialLink({ href, icon: Icon }) {
   return (
-    <a 
-      href={href} 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="text-gray-400 hover:text-white transition-colors duration-300"
-    >
-      <Icon size={24} />
-    </a>
+    <FadeIn delay={2.0}>
+      <a 
+        href={href} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-gray-400 hover:text-white transition-colors duration-300"
+      >
+        <Icon size={24} />
+      </a>
+    </FadeIn>
   );
 }
 
@@ -42,16 +44,18 @@ export default function Footer() {
       <div className="max-w-100% mx-auto flex flex-col items-center relative">
         {/* Desktop layout - dock floats above footer */}
         <div className="hidden md:flex justify-between items-center w-full h-16">
-          <div className="text-sm">
-            <time>© {YEAR}</time>{" "}
-            <a
-              className="no-underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {metaData.lastName}
-            </a>
-          </div>
+          <FadeIn delay={2.0}>
+            <div className="text-sm">
+              <time>© {YEAR}</time>{" "}
+              <a
+                className="no-underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {metaData.lastName}
+              </a>
+            </div>
+          </FadeIn>
           <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ bottom: '-20px' }}>
             <Dock />
           </div>

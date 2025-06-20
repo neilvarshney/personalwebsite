@@ -1,5 +1,5 @@
 "use client";
-
+import { FadeIn } from "./fade-in";
 import {
   motion,
   MotionValue,
@@ -227,28 +227,30 @@ export function Dock() {
   };
 
   return (
-    <motion.div
-      initial={{ y: 0, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="relative z-50 w-full max-w-[90vw] mx-auto"
-    >
-      <div className="bg-gray-800/90 backdrop-blur-md rounded-full px-2 py-2 flex items-center justify-center flex-wrap gap-1 sm:gap-2 shadow-lg">
-        {sections.map((section) => (
-          <button
-            key={section.id}
-            onClick={() => scrollToSection(section.id)}
-            className={`px-3 py-1 rounded-full transition-all duration-200 text-xs sm:text-sm whitespace-nowrap ${
-              activeSection === section.id
-                ? "bg-[#548ae8] text-white"
-                : "text-gray-300 hover:text-white hover:bg-gray-700"
-            }`}
-          >
-            {section.label}
-          </button>
-        ))}
-      </div>
-    </motion.div>
+    <FadeIn delay={1.4}>
+      <motion.div
+        initial={{ y: 0, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="relative z-50 w-full max-w-[90vw] mx-auto"
+      >
+        <div className="bg-gray-800/90 backdrop-blur-md rounded-full px-2 py-2 flex items-center justify-center flex-wrap gap-1 sm:gap-2 shadow-lg">
+          {sections.map((section) => (
+            <button
+              key={section.id}
+              onClick={() => scrollToSection(section.id)}
+              className={`px-3 py-1 rounded-full transition-all duration-200 text-xs sm:text-sm whitespace-nowrap ${
+                activeSection === section.id
+                  ? "bg-[#548ae8] text-white"
+                  : "text-gray-300 hover:text-white hover:bg-gray-700"
+              }`}
+            >
+              {section.label}
+            </button>
+          ))}
+        </div>
+      </motion.div>
+    </FadeIn>
   );
 }
 
