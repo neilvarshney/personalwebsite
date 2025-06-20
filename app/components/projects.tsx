@@ -60,7 +60,7 @@ export function Projects() {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-gray-700 rounded-full text-xs"
+                      className="px-2 py-1 bg-gray-700 rounded-full text-xs text-green-500"
                     >
                       {tech}
                     </span>

@@ -6,8 +6,12 @@ import { socialLinks } from "../lib/config";
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
-  if (element && window.lenis) {
-    window.lenis.scrollTo(element, { offset: 0 });
+  if (element && window.lenis && sectionId == 'home') {
+    window.lenis.scrollTo(element, { offset: -100 });
+  }
+  
+  else if (element && window.lenis) {
+    window.lenis.scrollTo(element, { offset: 200});
   }
 };
 

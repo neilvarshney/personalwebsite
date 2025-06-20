@@ -17,7 +17,7 @@ export function Resume() {
                 <div className="flex justify-center">
                     <button
                         onClick={handleOpenResume}
-                        className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow transition-colors duration-200"
+                        className="px-15 py-10 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow transition-colors duration-200"
                     >
                         View Resume (PDF)
                     </button>
