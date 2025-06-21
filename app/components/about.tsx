@@ -72,20 +72,22 @@ export function About() {
           <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
             <div className="lg:w-2/3 space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm <strong className="text-white">Neil Varshney</strong>, a passionate Computer Science student at Carleton University, focusing on
-                Computer and Internet Security. I have an ambition for full-stack development, artificial intelligence, and
-                cybersecurity. I have several projects that are currently in the making, so stay tuned! Aside from my academic and technical interests,
-                I have a serious passion for soccer (Hala Madrid!), FPS video games, and music.
+                I'm Neil Varshney, a passionate <span className="font-bold text-green-300">Computer Science student at Carleton University</span>, 
+                focusing on 
+                <span className="font-bold text-green-300"> Computer and Internet Security</span>. I have an ambition for 
+                <span className="font-bold text-green-300"> full-stack development, artificial intelligence, and
+                cybersecurity</span>. I have several projects that are currently in the making, so stay tuned! Aside from my academic and technical interests,
+                I have a serious passion for soccer (Hala Madrid!), FPS video games, and music!
               </p>      
             
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
                 <div className="flex items-center gap-3 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
-                  <FaCalendar className="text-[#548ae8] text-lg" />
-                  <span><strong className="font-bold text-white">Birthday:</strong> <span className="text-gray-300">July 2, 2005</span></span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
                   <FaLocationDot className="text-[#548ae8] text-lg" />
                   <span><strong className="font-bold text-white">Location:</strong> <span className="text-gray-300">Ottawa, ON or Toronto, ON</span></span>
+                </div>
+                <div className="flex items-center gap-3 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
+                  <FaCalendar className="text-[#548ae8] text-lg" />
+                  <span><strong className="font-bold text-white">Birthday:</strong> <span className="text-gray-300">July 2, 2005</span></span>
                 </div>
               </div>
 
@@ -95,8 +97,9 @@ export function About() {
                   <span className="font-bold text-lg text-white">Career Goals</span>
                 </div>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I'm currently seeking internship opportunities where I can apply my
-                  knowledge and contribute to meaningful projects, whether it's security solutions, web development, or back-end development. I'm
+                  I'm <span className="font-bold text-green-300">currently seeking internship opportunities</span> where I can apply my
+                  knowledge and contribute to meaningful projects, whether it's <span className="font-bold text-green-300">security solutions, web 
+                    development, or back-end development.</span> I'm
                   particularly interested in roles that combine software development
                   with security practices.
                 </p>
