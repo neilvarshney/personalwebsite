@@ -6,7 +6,7 @@ import { FaCamera, FaArrowLeft, FaLocationDot } from 'react-icons/fa6';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// You can add your photography data here
+
 const photographyData = [
   {
     id: 1,
@@ -126,6 +126,19 @@ export default function PhotographyPage() {
               })}
             </div>
           </ScrollFloat>
+
+          {/* More Photos Coming Soon Section */}
+          <div className="text-center pt-24 pb-8">
+            <FadeIn delay={0.5}>
+                <div className="inline-flex items-center gap-3 text-gray-600">
+                    <FaCamera className="text-xl" />
+                    <p className="text-lg font-semibold tracking-wider">
+                        More photos coming soon...
+                    </p>
+                </div>
+            </FadeIn>
+          </div>
+
         </div>
       </div>
     </div>
