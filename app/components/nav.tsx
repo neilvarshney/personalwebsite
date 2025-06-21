@@ -3,7 +3,6 @@ import { metaData } from "../lib/config";
 import GradientText from "./gradient-text";
 import { FadeIn } from './fade-in';
 
-
 const scrollToSection = (sectionId: string, offset: number = -100) => {
   const target = document.querySelector(sectionId);
   if (target && window.lenis) {

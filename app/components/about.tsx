@@ -7,9 +7,11 @@ import {
   FaCode,
   FaGamepad,
   FaMusic,
-  FaHeadphones
+  FaHeadphones,
+  FaCamera
 } from 'react-icons/fa6';
 import { MusicPlayer } from './MusicPlayer';
+import Link from 'next/link';
 
 const favoriteSongs = [
   {
@@ -77,7 +79,8 @@ export function About() {
                 <span className="font-bold text-green-300"> Computer and Internet Security</span>. I have an ambition for 
                 <span className="font-bold text-green-300"> full-stack development, artificial intelligence, and
                 cybersecurity</span>. I have several projects that are currently in the making, so stay tuned! Aside from my academic and technical interests,
-                I have a serious passion for soccer (Hala Madrid!), FPS video games, and music!
+                I have a serious passion for soccer (Hala Madrid!), FPS video games, and music! I also recently started enjoying photos, 
+                <a href="/photography"> <span className="font-bold hover:underline">check out my gallery!</span></a>
               </p>      
             
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
@@ -124,6 +127,13 @@ export function About() {
                     <FaMusic className="text-sm" />
                     Music
                   </span>
+                  <Link 
+                    href="/photography"
+                    className="flex items-center gap-2 bg-purple-500/20 text-purple-300 text-sm px-3 py-1 rounded-full border border-purple-500/30 hover:bg-purple-500/30 hover:border-purple-500/50 transition-all duration-300"
+                  >
+                    <FaCamera className=" text-purple-300 text-sm" />
+                    <span className=" text-purple-300">Photography</span>
+                  </Link>
                 </div>
               </div>
             </div>
