@@ -126,9 +126,9 @@ export function MusicPlayer({ song }: MusicPlayerProps) {
                     <p className="text-gray-400 text-sm">{song.artist}</p>
                 </div>
                 <div className="flex items-center gap-3 text-gray-400">
-                    {song.links.youtube && <a href={song.links.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-white"><FaYoutube size={20} /></a>}
-                    {song.links.soundcloud && <a href={song.links.soundcloud} target="_blank" rel="noopener noreferrer" className="hover:text-white"><FaSoundcloud size={20} /></a>}
-                    {song.links.spotify && <a href={song.links.spotify} target="_blank" rel="noopener noreferrer" className="hover:text-white"><FaSpotify size={20} /></a>}
+                    {song.links.youtube && <a href={song.links.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-white"><FaYoutube size={20} className='text-white-500 hover:text-red-800 transition-all duration-400' /></a>}
+                    {song.links.soundcloud && <a href={song.links.soundcloud} target="_blank" rel="noopener noreferrer" className="hover:text-white"><FaSoundcloud size={20} className='text-white-500 hover:text-orange-400 transition-all duration-400'/></a>}
+                    {song.links.spotify && <a href={song.links.spotify} target="_blank" rel="noopener noreferrer" className="hover:text-white"><FaSpotify size={20} className='text-white-500 hover:text-green-600 transition-all duration-400'/></a>}
                 </div>
             </div>
             
