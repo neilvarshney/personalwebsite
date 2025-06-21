@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@theme {
+  --breakpoint-xs: 300px;
+}
+
 html {
   scroll-behavior: smooth;
   min-width: 360px;

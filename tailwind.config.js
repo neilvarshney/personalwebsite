@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '300px',
+      },
       keyframes: {
         gradient: {
           '0%': { backgroundPosition: '0% 50%' },

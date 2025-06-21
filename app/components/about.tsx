@@ -128,7 +128,7 @@ export function About() {
               </div>
             </div>
             
-            <div className="lg:w-1/3 flex flex-col items-start gap-4 lg:pt-0 sm:pt-10">
+            <div className="lg:w-1/3 flex flex-col items-start gap-4 lg:pt-0 xs:pt-10">
                 <div className="flex items-center gap-3">
                     <FaHeadphones className="text-green-500 text-2xl" />
                     <h4 className="text-xl font-bold text-white">Currently Listening To</h4>
