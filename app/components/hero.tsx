@@ -67,7 +67,7 @@ export function Hero() {
         <div className="mt-12 flex justify-center">
           <button
             onClick={scrollToAbout}
-            className="group flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 hover:scale-105 transition-all duration-300 shadow-lg"
+            className="group flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-900 hover:scale-105 transition-all duration-300 shadow-lg"
           >
             Learn More
             <FaArrowDown className="transition-transform duration-300 group-hover:translate-y-1" />
