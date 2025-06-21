@@ -2,14 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme {
+/* @theme {
   --breakpoint-xs: 300px;
-}
+} */
 
 html {
   scroll-behavior: smooth;
   min-width: 360px;
   background-color: #111010;
+}
+
+/* Custom xs breakpoint class */
+@media (min-width: 300px) {
+  .xs\:pt-10 {
+    padding-top: 2.5rem; /* 40px */
+  }
 }
 
 @layer base {
