@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @theme {
-  --breakpoint-xs: 300px;
-} */
-
 html {
   scroll-behavior: smooth;
   min-width: 360px;
@@ -13,9 +9,9 @@ html {
 }
 
 /* Custom xs breakpoint class */
-@media (min-width: 300px) {
+@media (min-width: 300px) and (max-width: 1023px) {
   .xs\:pt-10 {
-    padding-top: 2.5rem; /* 40px */
+    padding-top: 2.5rem !important; /* 40px */
   }
 }
 
