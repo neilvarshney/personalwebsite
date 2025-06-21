@@ -70,16 +70,18 @@ export default function Footer() {
             <Dock />
           </div>
           <div className="flex justify-between items-center w-full">
-            <div className="text-[0.6rem]">
-              <time>© {YEAR}</time>{" "}
-              <a
-                className="no-underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {metaData.lastName}
-              </a>
-            </div>
+            <FadeIn delay={2.0}>
+              <div className="text-[0.6rem]">
+                <time>© {YEAR}</time>{" "}
+                <a
+                  className="no-underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {metaData.lastName}
+                </a>
+              </div>
+            </FadeIn>
             <div>
               <SocialLinks />
             </div>
