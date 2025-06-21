@@ -10,17 +10,22 @@ import {
   FaRss,
   FaLinkedinIn,
   FaEnvelope,
+  FaUser,
+  FaMessage,
+  FaPaperPlane,
+  FaComments
 } from "react-icons/fa6";
 
-function SocialLink({ href, icon: Icon }) {
+function SocialLink({ href, icon: Icon, platform }) {
   return (
     <a 
       href={href} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="text-gray-400 hover:text-white transition-colors duration-300"
+      className="flex items-center gap-2 px-4 py-3 bg-blue-300/20 text-gray-300 rounded-full hover:bg-[#548ae8] hover:text-white transition-all duration-300 border border-blue-500/30 hover:border-[#548ae8]"
     >
-      <Icon size={40}/>
+      <Icon size={24}/>
+      <span className="text-sm font-medium">{platform}</span>
     </a>
   );
 }
@@ -74,27 +79,44 @@ export function Contact() {
         stagger={0.1}
       >
         <h2 className="text-4xl mb-8"><span className="font-black">Contact</span></h2>
-        <div className="space-y-20 w-full">
-          <p className="text-lg text-left">
+        
+        <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-2xl p-8 border border-gray-700/50">
+          {/* Introduction Section */}
+          <div className="flex items-center gap-3 mb-8">
+            <FaComments className="text-[#548ae8] text-2xl" />
+            <h3 className="text-2xl font-bold text-white">Let's Connect</h3>
+          </div>
+          
+          <p className="text-lg text-gray-300 mb-12">
             Feel free to reach out to me about anything, whether that be new projects, creative ideas,
             or about my interests - I am open to everything!
           </p>
-          <div className="w-full flex justify-center items-center gap-6">
-            <div className="space-y-4 w-full max-w-lg mx-auto">
-              <h3 className="text-2xl font-semibold text-green-500 text-center">
-                Send Me a Message
-              </h3>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form Section */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-3 mb-6">
+                <FaMessage className="text-green-500 text-xl" />
+                <h4 className="text-xl font-bold text-white">Send Me a Message</h4>
+              </div>
+              
               {submitMessage && (
-                <p className={`text-center ${submitMessage.includes("successfully") ? "text-green-400" : "text-red-400"}`}>
+                <div className={`p-3 rounded-lg text-center ${
+                  submitMessage.includes("successfully") 
+                    ? "bg-green-500/20 text-green-400 border border-green-500/30" 
+                    : "bg-red-500/20 text-red-400 border border-red-500/30"
+                }`}>
                   {submitMessage}
-                </p>
+                </div>
               )}
+              
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-300"
+                    className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-2"
                   >
+                    <FaUser className="text-[#548ae8] text-sm" />
                     Name
                   </label>
                   <input
@@ -102,7 +124,7 @@ export function Contact() {
                     id="name"
                     name="name"
                     placeholder="ex: John Doe"
-                    className="pl-3 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-green-500 focus:ring-green-500"
+                    className="pl-3 mt-1 block w-full rounded-md bg-gray-700/50 border-2 border-gray-600 text-white focus:border-[#548ae8] focus:ring-[#548ae8] focus:ring-opacity-50 transition-all duration-200 hover:border-gray-500"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -111,8 +133,9 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-300"
+                    className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-2"
                   >
+                    <FaEnvelope className="text-[#548ae8] text-sm" />
                     Email
                   </label>
                   <input
@@ -120,7 +143,7 @@ export function Contact() {
                     id="email"
                     name="email"
                     placeholder="ex: example123@gmail.com"
-                    className="pl-3 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-green-500 focus:ring-green-500"
+                    className="pl-3 mt-1 block w-full rounded-md bg-gray-700/50 border-2 border-gray-600 text-white focus:border-[#548ae8] focus:ring-[#548ae8] focus:ring-opacity-50 transition-all duration-200 hover:border-gray-500"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -129,8 +152,9 @@ export function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-300"
+                    className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-2"
                   >
+                    <FaMessage className="text-[#548ae8] text-sm" />
                     Message
                   </label>
                   <textarea
@@ -138,7 +162,7 @@ export function Contact() {
                     name="message"
                     rows={4}
                     placeholder="Enter message here..."
-                    className="pl-3 mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white focus:border-green-500 focus:ring-green-500"
+                    className="pl-3 mt-1 block w-full rounded-md bg-gray-700/50 border-2 border-gray-600 text-white focus:border-[#548ae8] focus:ring-[#548ae8] focus:ring-opacity-50 transition-all duration-200 hover:border-gray-500"
                     value={message}
                     onChange={(e) =>  setMessage(e.target.value)}
                     required
@@ -146,18 +170,38 @@ export function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="font-bold w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-[#548ae8] transition-colors duration-200"
+                  className="flex items-center justify-center gap-2 w-full bg-[#548ae8] text-white py-3 px-4 rounded-md hover:bg-[#548ae8]/80 hover:scale-105 hover:shadow-lg transition-all duration-200 font-semibold disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-none"
                   disabled={isSubmitting}
                 >
+                  <FaPaperPlane className="text-sm" />
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>
-          </div>
-          <div className="flex justify-center items-center gap-10">
-            <SocialLink href={socialLinks.email} icon={FaEnvelope} />
-            <SocialLink href={socialLinks.github} icon={FaGithub} />
-            <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} />
+
+            {/* Social Links Section */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-3 mb-6">
+                <FaEnvelope className="text-purple-500 text-xl" />
+                <h4 className="text-xl font-bold text-white">Connect With Me</h4>
+              </div>
+              
+              <p className="text-gray-300 mb-8">
+                Prefer to reach out through social media? Feel free to connect with me on any of these platforms!
+              </p>
+              
+              <div className="space-y-4">
+                <SocialLink href={socialLinks.email} icon={FaEnvelope} platform="Email" />
+                <SocialLink href={socialLinks.github} icon={FaGithub} platform="GitHub" />
+                <SocialLink href={socialLinks.linkedin} icon={FaLinkedinIn} platform="LinkedIn" />
+              </div>
+              
+              <div className="mt-8 p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
+                <p className="text-sm text-gray-300">
+                  <strong className="text-[#548ae8]">Quick Response:</strong> I typically respond within 24 hours during weekdays.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </ScrollFloat>

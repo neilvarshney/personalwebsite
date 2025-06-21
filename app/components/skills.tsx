@@ -1,22 +1,91 @@
 import { FadeIn } from "./fade-in";
 import { ScrollFloat } from "./scroll-float";
+import { 
+  FaCode, 
+  FaLaptopCode, 
+  FaServer, 
+  FaBrain,
+  FaJs,
+  FaPython,
+  FaJava,
+  FaDatabase,
+  FaGithub,
+  FaReact,
+  FaNodeJs,
+  FaDocker
+} from 'react-icons/fa';
+import { 
+  SiTypescript, 
+  SiNextdotjs, 
+  SiTailwindcss, 
+  SiCplusplus, 
+  SiC, 
+  SiNpm, 
+  SiLinux, 
+  SiSqlite,
+  SiFlask,
+  SiFastapi,
+  SiPytorch,
+  SiPandas,
+  SiNumpy,
+  SiScikitlearn
+} from 'react-icons/si';
 
 const skills = [
   {
     category: "Front-End Development",
-    items: ["JavaScript", "TypeScript", "React.js", "Next.js", "Tailwind CSS", "CSS", "HTML"],
+    icon: FaCode,
+    color: "text-blue-500",
+    items: [
+      { name: "JavaScript", icon: FaJs },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "React.js", icon: FaReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "CSS", icon: FaCode },
+      { name: "HTML", icon: FaCode }
+    ],
   },
   {
     category: "Other Languages & Tools",
-    items: ["Python", "Java", "C++", "C", "GitHub", "Git", "npm", "Unix/Linux", "VS Code"],
+    icon: FaLaptopCode,
+    color: "text-purple-500",
+    items: [
+      { name: "Python", icon: FaPython },
+      { name: "Java", icon: FaJava },
+      { name: "C++", icon: SiCplusplus },
+      { name: "C", icon: SiC },
+      { name: "GitHub", icon: FaGithub },
+      { name: "Git", icon: FaGithub },
+      { name: "npm", icon: SiNpm },
+      { name: "Unix/Linux", icon: SiLinux },
+      { name: "VS Code", icon: FaCode }
+    ],
   },
   {
     category: "Back-End Development",
-    items: ["SQLite", "Flask", "FastAPI", "RESTful APIs", "Node.js", "Deno"],
+    icon: FaServer,
+    color: "text-green-500",
+    items: [
+      { name: "SQLite", icon: SiSqlite },
+      { name: "Flask", icon: SiFlask },
+      { name: "FastAPI", icon: SiFastapi },
+      { name: "RESTful APIs", icon: FaServer },
+      { name: "Node.js", icon: FaNodeJs },
+      { name: "Deno", icon: FaCode }
+    ],
   },
   {
     category: "Machine Learning & AI",
-    items: ["PyTorch", "Pandas", "NumPy", "Scikit-learn", "Natural Language Processing (NLP)"],
+    icon: FaBrain,
+    color: "text-orange-500",
+    items: [
+      { name: "PyTorch", icon: SiPytorch },
+      { name: "Pandas", icon: SiPandas },
+      { name: "NumPy", icon: SiNumpy },
+      { name: "Scikit-learn", icon: SiScikitlearn },
+      { name: "Natural Language Processing (NLP)", icon: FaBrain }
+    ],
   },
 ];
 
@@ -31,24 +100,31 @@ export function Skills() {
         stagger={0.1}
       >
         <h2 className="text-4xl mb-8"><span className="font-black">Skills</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-30 gap-y-8">
-          {skills.map((skillGroup, index) => (
-            <div key={index} className="space-y-4">
-              <h3 className="text-2xl font-semibold text-green-500">
-                {skillGroup.category}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skillGroup.items.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="px-3 py-1 bg-gray-800 rounded-full text-sm hover:bg-gray-700 transition-colors duration-200"
-                  >
-                    {skill}
-                  </span>
-                ))}
+        
+        <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-2xl p-8 border border-gray-700/50">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {skills.map((skillGroup, index) => (
+              <div key={index} className="space-y-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <skillGroup.icon className={`text-2xl ${skillGroup.color}`} />
+                  <h3 className="text-xl font-bold text-white">
+                    {skillGroup.category}
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {skillGroup.items.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="flex items-center gap-2 px-3 py-2 bg-blue-300/20 text-gray-300 text-sm rounded-full hover:bg-[#548ae8] hover:text-white transition-all duration-300 cursor-pointer border border-blue-500/30 hover:border-[#548ae8]"
+                    >
+                      <skill.icon className="text-sm" />
+                      {skill.name}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </ScrollFloat>
     </div>

@@ -1,68 +1,72 @@
-# Neil Varshney's Portfolio
+# Neil Varshney - Personal Portfolio
 
-A modern, responsive personal portfolio website built with Next.js, showcasing my work, skills, and experience as a Computer Science student specializing in Computer and Internet Security.
+This is the repository for my personal portfolio website, a modern, fully-responsive platform designed to showcase my skills, projects, and academic journey as a Computer Science student at Carleton University.
 
-## 🚀 Features
+**[View Live Demo](https://neilvarshney.vercel.app)**
 
-- **Modern UI/UX**: Built with Next.js and styled using Tailwind CSS
-- **Smooth Animations**: 
-  - Scroll-based animations using ScrollReveal
-  - Smooth scrolling with Lenis
-  - Fade-in effects for content sections
-  - Type animation for dynamic text
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Interactive Elements**:
-  - Dynamic typing animation for name and roles
-  - Hover effects on profile image and links
-  - Smooth scroll navigation
-- **Performance Optimized**:
-  - Image optimization with Next.js Image component
-  - Client-side rendering where needed
-  - Efficient animations
+---
+
+## ✨ Features
+
+This portfolio is built from the ground up with a focus on a clean user experience, modern design, and interactive elements.
+
+- **Themed UI/UX**: A cohesive and visually appealing dark theme is applied across all sections of the portfolio.
+- **Fully Responsive**: The layout is optimized for all screen sizes, from mobile phones to desktop monitors.
+- **Interactive Sections**: Each section is wrapped in a custom-styled container with unique icons and hover effects.
+  - **About Me**: A personal introduction, career goals, and a custom-built music player for my favorite songs.
+  - **Skills**: A detailed breakdown of my technical skills, categorized and complete with icons.
+  - **Projects**: A showcase of my key projects with descriptions, tech stacks, and links.
+  - **Education**: A summary of my academic journey, awards, relevant coursework, and extracurriculars. Includes an easy-to-access resume download.
+  - **Contact**: An interactive contact form with real-time validation and social media links.
+- **Custom Music Player**: A Spotify-inspired component that can play audio files, complete with play/pause, seek, mute, and links to streaming platforms.
+- **Smooth Animations**: Subtle, scroll-based fade-in animations powered by Framer Motion add a dynamic feel to the site.
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js
-- **Styling**: Tailwind CSS
-- **Animations**: 
-  - Framer Motion
-  - react-type-animation
-  - Custom ScrollReveal components
-- **Smooth Scrolling**: Lenis
-- **Deployment**: Ready for deployment on Vercel
+- **Framework**: [Next.js](https://nextjs.org/) (React)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with the Typography plugin.
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Deployment**: [Vercel](https://vercel.com/)
 
-## 📋 Sections
-
-1. **Home**: Introduction with animated typing effect
-2. **Education**: Academic background
-3. **Projects**: Showcase of development work
-4. **Blog**: Technical writing and insights
-5. **Photos**: Personal photography section
+---
 
 ## 🚀 Getting Started
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/my-portfolio.git
-```
+To run this project locally, follow these steps:
 
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/neilvarshney/my-portfolio.git
+    cd my-portfolio
+    ```
 
-3. Run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-```
+2.  **Install dependencies:**
+    I recommend using `pnpm` for package management.
+    ```bash
+    pnpm install
+    ```
+    Alternatively, you can use `npm` or `yarn`:
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+3.  **Run the development server:**
+    ```bash
+    pnpm run dev
+    ```
+    The site will be available at `http://localhost:3000`.
 
+---
 
-## 🤝 Contact
+## 🤝 Connect with Me
 
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/neil-varshney/) or reach out through the contact form on the website.
+I'm always open to connecting with new people. Feel free to reach out!
+
+-   **LinkedIn**: [linkedin.com/in/neil-varshney](https://www.linkedin.com/in/neil-varshney/)
+-   **Website**: [neilvarshney.vercel.app](https://neilvarshney.vercel.app)
