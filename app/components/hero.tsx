@@ -3,7 +3,18 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { FaArrowDown } from 'react-icons/fa6';
 import { FadeIn } from "./fade-in";
-import { socialLinks } from "../lib/config";
+import { 
+  FaFilePdf, 
+  FaDownload, 
+  FaEye, 
+  FaGraduationCap, 
+  FaBriefcase, 
+  FaCode,
+  FaAward,
+  FaBook,
+  FaCalendar,
+  FaUsers
+} from 'react-icons/fa6';
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
@@ -17,6 +28,19 @@ const scrollToSection = (sectionId: string) => {
 };
 
 export function Hero() {
+
+  const handleOpenResume = () => {
+    window.open("/Neil_Varshney_Resume.pdf", "_blank", "noopener,noreferrer");
+  };
+
+  const handleDownloadResume = () => {
+      const link = document.createElement('a');
+      link.href = "/Neil_Varshney_Resume.pdf";
+      link.download = "Neil_Varshney_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+  };
   const scrollToAbout = () => {
     const aboutSection = document.getElementById("about");
     if (aboutSection && window.lenis) {
@@ -64,6 +88,16 @@ export function Hero() {
           Passionate about building unique digital experiences and exploring the world of AI and cybersecurity.
         </p>
         
+        <div className="mt-10 flex justify-center">
+          <button
+            onClick={handleOpenResume}
+            className="group flex items-center justify-center gap-2 px-6 py-3 bg-red-500 text-white font-semibold rounded-full hover:bg-red-700 hover:scale-105 transition-all duration-300 shadow-lg"
+            >
+            <FaEye className="transition-transform duration-300" />
+                View Resume (PDF)
+          </button>
+        </div>
+
         <div className="mt-12 flex justify-center">
           <button
             onClick={scrollToAbout}
