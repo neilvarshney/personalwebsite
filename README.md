@@ -6,7 +6,7 @@ This is the repository for my personal portfolio website, a modern, fully-respon
 
 ---
 
-## ✨ Features
+## Features
 
 This portfolio is built from the ground up with a focus on a clean user experience, modern design, and interactive elements.
 
@@ -23,7 +23,7 @@ This portfolio is built from the ground up with a focus on a clean user experien
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (React)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
@@ -34,7 +34,7 @@ This portfolio is built from the ground up with a focus on a clean user experien
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 To run this project locally, follow these steps:
 
@@ -64,7 +64,7 @@ To run this project locally, follow these steps:
 
 ---
 
-## 🤝 Connect with Me
+## Connect with Me
 
 I'm always open to connecting with new people. Feel free to reach out!
 
