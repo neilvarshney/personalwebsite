@@ -1,7 +1,5 @@
 import { ScrollFloat } from "./scroll-float";
 import { 
-  FaFilePdf, 
-  FaDownload, 
   FaEye, 
   FaGraduationCap, 
   FaBriefcase, 
@@ -13,18 +11,6 @@ import {
 } from 'react-icons/fa6';
 
 export function Education() {
-    const handleOpenResume = () => {
-        window.open("/Neil_Varshney_Resume.pdf", "_blank", "noopener,noreferrer");
-    };
-
-    const handleDownloadResume = () => {
-        const link = document.createElement('a');
-        link.href = "/Neil_Varshney_Resume.pdf";
-        link.download = "Neil_Varshney_Resume.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
 
     return(
         <div className="prose prose-neutral dark:prose-invert font-['Poppins']">
@@ -109,28 +95,6 @@ export function Education() {
                                     </div>
                                 </div>
 
-                                {/* Technical Focus Section */}
-                                <div className="space-y-3">
-                                    <div className="flex items-center gap-2">
-                                        <FaCode className="text-purple-500 text-xl" />
-                                        <span className="font-bold text-lg text-white">Technical Focus</span>
-                                    </div>
-                                    <div className="flex flex-wrap gap-2">
-                                        <span className="bg-purple-500/20 text-purple-300 text-sm px-3 py-1 rounded-full border border-purple-500/30 hover:bg-purple-500/30 transition-all duration-300 cursor-pointer">
-                                            Full-Stack Development
-                                        </span>
-                                        <span className="bg-purple-500/20 text-purple-300 text-sm px-3 py-1 rounded-full border border-purple-500/30 hover:bg-purple-500/30 transition-all duration-300 cursor-pointer">
-                                            Cybersecurity
-                                        </span>
-                                        <span className="bg-purple-500/20 text-purple-300 text-sm px-3 py-1 rounded-full border border-purple-500/30 hover:bg-purple-500/30 transition-all duration-300 cursor-pointer">
-                                            AI & Machine Learning
-                                        </span>
-                                        <span className="bg-purple-500/20 text-purple-300 text-sm px-3 py-1 rounded-full border border-purple-500/30 hover:bg-purple-500/30 transition-all duration-300 cursor-pointer">
-                                            Web Applications
-                                        </span>
-                                    </div>
-                                </div>
-
                                 {/* Extracurricular Activities Section */}
                                 <div className="space-y-3">
                                     <div className="flex items-center gap-2">
@@ -164,32 +128,6 @@ export function Education() {
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     </div>
                                 </a>
-                            </div>
-
-                            {/* Resume Actions */}
-                            <div className="space-y-4">
-                                <div className="text-center">
-                                    <p className="text-gray-300 mb-4">
-                                        View my complete resume for detailed information about my education, 
-                                        projects, skills, and experience.
-                                    </p>
-                                </div>
-
-                                <button
-                                    onClick={handleOpenResume}
-                                    className="group w-full flex items-center justify-center gap-3 px-6 py-4 bg-[#548ae8] text-white rounded-xl hover:bg-[#548ae8]/80 hover:scale-105 hover:shadow-lg transition-all duration-200 font-semibold"
-                                >
-                                    <FaEye className="text-lg group-hover:scale-110 transition-transform duration-200" />
-                                    View Resume (PDF)
-                                </button>
-                                
-                                <button
-                                    onClick={handleDownloadResume}
-                                    className="group w-full flex items-center justify-center gap-3 px-6 py-4 bg-transparent text-[#548ae8] border-2 border-[#548ae8] rounded-xl hover:bg-[#548ae8] hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-200 font-semibold"
-                                >
-                                    <FaDownload className="text-lg group-hover:scale-110 transition-transform duration-200" />
-                                    Download Resume
-                                </button>
                             </div>
                         </div>
                     </div>
