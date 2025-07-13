@@ -2,7 +2,7 @@
 
 This is the repository for my personal portfolio website, a modern, fully-responsive platform designed to showcase my skills, projects, and academic journey as a Computer Science student at Carleton University.
 
-**[View Live Demo](https://neilvarshney.vercel.app)**
+## [View Live Demo](https://neilvarshney.vercel.app)
 
 ---
 
