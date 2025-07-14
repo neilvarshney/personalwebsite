@@ -28,7 +28,8 @@ import {
   SiPytorch,
   SiPandas,
   SiNumpy,
-  SiScikitlearn
+  SiScikitlearn,
+  SiMongodb
 } from 'react-icons/si';
 
 const skills = [
@@ -68,6 +69,7 @@ const skills = [
     color: "text-green-500",
     items: [
       { name: "SQLite", icon: SiSqlite },
+      { name: "MongoDB", icon: SiMongodb },
       { name: "Flask", icon: SiFlask },
       { name: "FastAPI", icon: SiFastapi },
       { name: "RESTful APIs", icon: FaServer },

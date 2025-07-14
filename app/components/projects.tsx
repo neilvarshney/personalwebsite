@@ -19,13 +19,21 @@ const projects = [
     link: "https://github.com/neilvarshney/Anime-Haven",
   },
   {
+    title: "Password Manager",
+    description:
+      "A secure, client-side encrypted password manager built as a Chrome extension with a Flask backend. This project demonstrates advanced security practices including JWT authentication, password-based encryption, and secure key derivation.",
+    technologies: ["Python", "Flask", "React", "MongoDB", "JavaScript", "HTML/CSS"],
+    image: "/dashboard.png",
+    link: "https://github.com/neilvarshney/Password-Manager",
+  },
+  {
     title: "Portfolio Website",
     description:
       "A modern, responsive personal portfolio website built with Next.js, showcasing my work, skills, and experience as a Computer Science student.",
     technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Node.js", "HTML/CSS"],
     image: "/portfolio.png",
     link: "https://neilvarshney.vercel.app",
-  },
+  }
 ];
 
 export function Projects() {
