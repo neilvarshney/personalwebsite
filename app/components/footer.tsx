@@ -53,7 +53,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {metaData.lastName}
+                {metaData.name}
               </a>
             </div>
           </FadeIn>
