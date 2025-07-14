@@ -15,27 +15,27 @@ import Link from 'next/link';
 
 const favoriteSongs = [
   {
-    title: 'sol',
-    artist: 'Che',
-    artistUrl: 'https://open.spotify.com/artist/5A7T1LAGJg5NXySBoIKUmF',
-    albumArt: '/closedCaptionsChe.png',
-    audioUrl: '/sol.mp3',
+    title: 'MERCEDES.2005',
+    artist: 'untiljapan',
+    artistUrl: 'https://open.spotify.com/artist/4bXDZie6sqszxFN6D0Mi2K?si=5dwyiF1FRvqkRtILySAbfg',
+    albumArt: '/trompe.jpg',
+    audioUrl: '/MERCEDES. 2005.mp3',
     links: {
-      spotify: 'https://open.spotify.com/track/0A5QC5r1AMUccnd34pOlzs',
-      youtube: 'https://www.youtube.com/watch?v=u3hJAvzE4hk',
-      soundcloud: 'https://soundcloud.com/che/sol'
+      spotify: 'https://open.spotify.com/artist/4bXDZie6sqszxFN6D0Mi2K?si=5dwyiF1FRvqkRtILySAbfg',
+      youtube: 'https://www.youtube.com/channel/UCXcgY4HCZeyyOjQkqOQ6onA',
+      soundcloud: 'https://soundcloud.com/untiljapan/mercedes-2005'
     }
   },
   {
-    title: 'Home (KOD)',
-    artist: 'Playboi Carti',
-    artistUrl: 'https://open.spotify.com/artist/699OTQXzgjhIYAHMy9RyPD',
-    albumArt: '/dieLit.jpg',
-    audioUrl: '/home(KOD).mp3',
+    title: 'real feel',
+    artist: 'skaiwater',
+    artistUrl: 'https://open.spotify.com/artist/1URVdcNYXigvk6Dj0fHYOM?si=IfcljFWWTb28eddONjR50g',
+    albumArt: '/realfeelIMG.png',
+    audioUrl: '/realfeel.mp3',
     links: {
-      spotify: 'https://open.spotify.com/track/5wPyd3IQAZft1vmxoIqGrU',
-      youtube: 'https://www.youtube.com/watch?v=-2pjiKmhlAI',
-      soundcloud: 'https://soundcloud.com/playboicarti/albums'
+      spotify: 'https://open.spotify.com/track/7fShwQkgkUYrL6GttNjHTb',
+      youtube: 'https://www.youtube.com/watch?v=5LPPu1GhxTA',
+      soundcloud: 'https://soundcloud.com/skaiwater/skaiwater-real-feel'
     }
   },
   {
