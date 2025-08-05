@@ -74,7 +74,7 @@ export default function RootLayout({
           />
         </div>
         <LenisProvider>
-          <div className="relative min-h-screen">
+          <div className="relative">
             <Navbar />
             <main className="flex-auto min-w-0 flex flex-col">
               {children}

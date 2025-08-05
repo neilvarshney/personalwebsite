@@ -44,6 +44,24 @@ const photographyData = [
     category: "Urban",
     height: "h-76",
   },
+  {
+    id: 5,
+    title: "Downtown Chicago Lake",
+    description: "Downtown Chicago Lake",
+    imageUrl: "/dtChicagoLake.jpeg",
+    location: "Chicago, IL",
+    category: "Urban",
+    height: "h-120",
+  },
+  {
+    id: 6,
+    title: "Downtown Chicago",
+    description: "Downtown Chicago",
+    imageUrl: "/dtChicago.jpeg",
+    location: "Chicago, IL",
+    category: "Urban",
+    height: "h-80",
+  },
 ];
 
 export default function PhotographyPage() {
