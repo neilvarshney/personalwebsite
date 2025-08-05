@@ -9,7 +9,7 @@ const scrollToSection = (sectionId: string, offset: number = -100) => {
     window.lenis.scrollTo(target, { 
       offset,
       duration: 0.8,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+      easing: (t: any) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
     });
   }
 };

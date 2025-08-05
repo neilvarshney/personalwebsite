@@ -23,17 +23,6 @@ This portfolio is built from the ground up with a focus on a clean user experien
 
 ---
 
-## Tech Stack
-
-- **Framework**: [Next.js](https://nextjs.org/) (React)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with the Typography plugin.
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
-- **Deployment**: [Vercel](https://vercel.com/)
-
----
-
 ## Getting Started
 
 To run this project locally, follow these steps:
