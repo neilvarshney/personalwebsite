@@ -33,6 +33,15 @@ const projects = [
     technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Node.js", "HTML/CSS"],
     image: "/portfolio.png",
     link: "https://neilvarshney.vercel.app",
+  },
+
+  {
+    title: "Obstacle Dodger",
+    description:
+      "A simple 2D arcade-style game where players dodge horizontally moving obstacles. Built with Java Processing.",
+    technologies: ["Java", "Java Processing", "G.U.I"],
+    image: "/obstacleDodger.png",
+    link: "https://github.com/neilvarshney/Obstacle-Dodger",
   }
 ];
 
