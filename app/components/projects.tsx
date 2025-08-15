@@ -21,10 +21,18 @@ const projects = [
   {
     title: "Password Manager",
     description:
-      "A secure, client-side encrypted password manager built as a Chrome extension with a Flask backend. This project demonstrates advanced security practices including JWT authentication, password-based encryption, and secure key derivation.",
+      "A modern, responsive weather application built with Next.js that provides real-time weather information with dynamic background colors based on time of day and weather conditions.",
     technologies: ["Python", "Flask", "React", "MongoDB", "JavaScript", "HTML/CSS"],
     image: "/dashboard.png",
     link: "https://github.com/neilvarshney/Password-Manager",
+  },
+  {
+    title: "Weather App",
+    description:
+      "A secure, client-side encrypted password manager built as a Chrome extension with a Flask backend. This project demonstrates advanced security practices including JWT authentication, password-based encryption, and secure key derivation.",
+    technologies: ["Python", "Flask", "React", "TypeScript", "Tailwind CSS", "Next.js"],
+    image: "/weatherApp.png",
+    link: "https://github.com/neilvarshney/Weather-App",
   },
   {
     title: "Portfolio Website",
