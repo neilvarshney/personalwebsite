@@ -62,6 +62,33 @@ const photographyData = [
     category: "Urban",
     height: "h-80",
   },
+  {
+    id: 7,
+    title: "Downtown Burlington",
+    description: "Downtown Burlington Lakeshore",
+    imageUrl: "/burl1.jpeg",
+    location: "Burlington, ON",
+    category: "Urban",
+    height: "h-110",
+  },
+  {
+    id: 8,
+    title: "Downtown Burlington",
+    description: "Downtown Burlington Buildings",
+    imageUrl: "/burl2.jpeg",
+    location: "Burlington, ON",
+    category: "Urban",
+    height: "h-100",
+  },
+  {
+    id: 9,
+    title: "Downtown Burlington",
+    description: "Downtown Burlington with Friends",
+    imageUrl: "/burl3.jpeg",
+    location: "Burlington, ON",
+    category: "Urban",
+    height: "h-80",
+  },
 ];
 
 export default function PhotographyPage() {
