@@ -15,39 +15,39 @@ import Link from 'next/link';
 
 const favoriteSongs = [
   {
-    title: 'MERCEDES.2005',
-    artist: 'untiljapan',
-    artistUrl: 'https://open.spotify.com/artist/4bXDZie6sqszxFN6D0Mi2K?si=5dwyiF1FRvqkRtILySAbfg',
-    albumArt: '/trompe.jpg',
-    audioUrl: '/MERCEDES. 2005.mp3',
+    title: 'Part The Red Seas',
+    artist: 'che',
+    artistUrl: 'https://open.spotify.com/artist/5A7T1LAGJg5NXySBoIKUmF?si=G8gJYwQOSDylUf03a1rgdA',
+    albumArt: '/che.jpg',
+    audioUrl: '/seas.mp3',
     links: {
-      spotify: 'https://open.spotify.com/artist/4bXDZie6sqszxFN6D0Mi2K?si=5dwyiF1FRvqkRtILySAbfg',
-      youtube: 'https://www.youtube.com/channel/UCXcgY4HCZeyyOjQkqOQ6onA',
-      soundcloud: 'https://soundcloud.com/untiljapan/mercedes-2005'
+      spotify: 'https://open.spotify.com/artist/5A7T1LAGJg5NXySBoIKUmF?si=xZEqSEMxSxipkYkD8YbGug',
+      youtube: 'https://www.youtube.com/@che1101',
+      soundcloud: 'https://soundcloud.com/che'
     }
   },
   {
-    title: 'real feel',
-    artist: 'skaiwater',
-    artistUrl: 'https://open.spotify.com/artist/1URVdcNYXigvk6Dj0fHYOM?si=IfcljFWWTb28eddONjR50g',
-    albumArt: '/realfeelIMG.png',
-    audioUrl: '/realfeel.mp3',
-    links: {
-      spotify: 'https://open.spotify.com/track/7fShwQkgkUYrL6GttNjHTb',
-      youtube: 'https://www.youtube.com/watch?v=5LPPu1GhxTA',
-      soundcloud: 'https://soundcloud.com/skaiwater/skaiwater-real-feel'
-    }
-  },
-  {
-    title: 'Still The Same! 2',
-    artist: 'Autumn',
+    title: 'When You Left (One Way! 3)',
+    artist: 'Autumn!',
     artistUrl: 'https://open.spotify.com/artist/5delTPpDAtBDsjk60f5xnt',
-    albumArt: '/gc3.jpg',
-    audioUrl: '/StillTheSame!2.mp3',
+    albumArt: '/oneway3.png',
+    audioUrl: '/oneway3.mp3',
     links: {
-      spotify: 'https://open.spotify.com/track/52VyUACgDgA0koWh7rfJoB',
-      youtube: 'https://www.youtube.com/watch?v=hxSNX1RR088',
-      soundcloud: 'https://soundcloud.com/twinuzis/sts-2-final?in=fayg0-95798732/sets/autumn&utm_source=direct&utm_content=store_button_footer&utm_medium=mobi&utm_campaign=no_campaign'
+      spotify: 'https://open.spotify.com/album/5nRZvptYSovwcoaz75pMUU?si=kdlPl95LQd6EqlOhCiMWWw',
+      youtube: 'https://www.youtube.com/@autumn4238/videos',
+      soundcloud: 'https://soundcloud.com/twinuzis/when-you-left'
+    }
+  },
+  {
+    title: 'idk wtf',
+    artist: 'prettifun',
+    artistUrl: 'https://open.spotify.com/artist/3J3ngZn7GjzjwCPBkqtz65?si=foAe1fqrTUSO1qGUmSG8lQ',
+    albumArt: '/idkwtf.jpg',
+    audioUrl: '/idkwtf.mp3',
+    links: {
+      spotify: 'https://open.spotify.com/album/3N9AYh1fFKKBzjC7tB9tcL?si=_iznXMjWRIycQC5jpiFJXQ',
+      youtube: 'https://www.youtube.com/watch?v=nFpbYHMJyy8',
+      soundcloud: 'https://soundcloud.com/prettifun/idk-wtf'
     }
   }
 ];
