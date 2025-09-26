@@ -78,6 +78,9 @@ export function Education() {
                                     </div>
                                     <div className="flex flex-wrap gap-2">
                                         <span className="bg-blue-300/20 text-gray-300 text-sm px-3 py-1 rounded-full hover:bg-[#548ae8] hover:text-white transition-all duration-300 cursor-pointer border border-blue-500/30">
+                                            Database & Management Systems
+                                        </span>
+                                        <span className="bg-blue-300/20 text-gray-300 text-sm px-3 py-1 rounded-full hover:bg-[#548ae8] hover:text-white transition-all duration-300 cursor-pointer border border-blue-500/30">
                                             Abstract Data Types & Algorithms
                                         </span>
                                         <span className="bg-blue-300/20 text-gray-300 text-sm px-3 py-1 rounded-full hover:bg-[#548ae8] hover:text-white transition-all duration-300 cursor-pointer border border-blue-500/30">
@@ -88,6 +91,9 @@ export function Education() {
                                         </span>
                                         <span className="bg-blue-300/20 text-gray-300 text-sm px-3 py-1 rounded-full hover:bg-[#548ae8] hover:text-white transition-all duration-300 cursor-pointer border border-blue-500/30">
                                             Fundamentals Web Applications
+                                        </span>
+                                        <span className="bg-blue-300/20 text-gray-300 text-sm px-3 py-1 rounded-full hover:bg-[#548ae8] hover:text-white transition-all duration-300 cursor-pointer border border-blue-500/30">
+                                            Intro to Software Engineering
                                         </span>
                                         <span className="bg-blue-300/20 text-gray-300 text-sm px-3 py-1 rounded-full hover:bg-[#548ae8] hover:text-white transition-all duration-300 cursor-pointer border border-blue-500/30">
                                             Discrete Structures II
