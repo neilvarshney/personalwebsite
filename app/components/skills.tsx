@@ -35,33 +35,27 @@ import {
 
 const skills = [
   {
-    category: "Front-End Development",
+    category: "Languages",
     icon: FaCode,
     color: "text-blue-500",
-    items: [
-      { name: "JavaScript", icon: FaJs },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "React.js", icon: FaReact },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "CSS", icon: FaCode },
-      { name: "HTML", icon: FaCode }
-    ],
-  },
-  {
-    category: "Other Languages & Tools",
-    icon: FaLaptopCode,
-    color: "text-purple-500",
     items: [
       { name: "Python", icon: FaPython },
       { name: "Java", icon: FaJava },
       { name: "C++", icon: SiCplusplus },
       { name: "C", icon: SiC },
-      { name: "GitHub", icon: FaGithub },
-      { name: "Git", icon: FaGithub },
-      { name: "npm", icon: SiNpm },
-      { name: "Unix/Linux", icon: SiLinux },
-      { name: "VS Code", icon: FaCode }
+      { name: "JavaScript/TypeScript", icon: SiTypescript }
+    ],
+  },
+  {
+    category: "Front-End Development",
+    icon: FaLaptopCode,
+    color: "text-purple-500",
+    items: [
+      { name: "React.js", icon: FaReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "HTML5", icon: FaCode },
+      { name: "CSS3", icon: FaCode },
+      { name: "Tailwind CSS", icon: SiTailwindcss }
     ],
   },
   {
@@ -69,26 +63,25 @@ const skills = [
     icon: FaServer,
     color: "text-green-500",
     items: [
-      { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "SQLite", icon: SiSqlite },
       { name: "MongoDB", icon: SiMongodb },
-      { name: "Flask", icon: SiFlask },
-      { name: "FastAPI", icon: SiFastapi },
-      { name: "RESTful APIs", icon: FaServer },
+      { name: "SQL", icon: SiPostgresql },
       { name: "Node.js", icon: FaNodeJs },
-      { name: "Deno", icon: FaCode }
+      { name: "FastAPI", icon: SiFastapi },
+      { name: "Flask", icon: SiFlask },
+      { name: "RESTful APIs", icon: FaServer }
     ],
   },
   {
-    category: "Machine Learning & AI",
+    category: "M.L & Tools",
     icon: FaBrain,
     color: "text-orange-500",
     items: [
       { name: "PyTorch", icon: SiPytorch },
       { name: "Pandas", icon: SiPandas },
-      { name: "NumPy", icon: SiNumpy },
-      { name: "Scikit-learn", icon: SiScikitlearn },
-      { name: "Natural Language Processing (NLP)", icon: FaBrain }
+      { name: "Git", icon: FaGithub },
+      { name: "GitHub", icon: FaGithub },
+      { name: "Linux", icon: SiLinux },
+      { name: "RESTful APIs", icon: FaServer }
     ],
   },
 ];
