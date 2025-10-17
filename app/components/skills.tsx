@@ -15,6 +15,7 @@ import {
   FaDocker
 } from 'react-icons/fa';
 import { 
+  SiPostgresql,
   SiTypescript, 
   SiNextdotjs, 
   SiTailwindcss, 
@@ -68,6 +69,7 @@ const skills = [
     icon: FaServer,
     color: "text-green-500",
     items: [
+      { name: "PostgreSQL", icon: SiPostgresql },
       { name: "SQLite", icon: SiSqlite },
       { name: "MongoDB", icon: SiMongodb },
       { name: "Flask", icon: SiFlask },
