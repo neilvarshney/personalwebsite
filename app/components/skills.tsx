@@ -43,7 +43,8 @@ const skills = [
       { name: "Java", icon: FaJava },
       { name: "C++", icon: SiCplusplus },
       { name: "C", icon: SiC },
-      { name: "JavaScript/TypeScript", icon: SiTypescript }
+      { name: "JavaScript", icon: FaJs },
+      { name: "TypeScript", icon: SiTypescript }
     ],
   },
   {
@@ -64,7 +65,8 @@ const skills = [
     color: "text-green-500",
     items: [
       { name: "MongoDB", icon: SiMongodb },
-      { name: "SQL", icon: SiPostgresql },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "SQLite", icon: SiSqlite },
       { name: "Node.js", icon: FaNodeJs },
       { name: "FastAPI", icon: SiFastapi },
       { name: "Flask", icon: SiFlask },
