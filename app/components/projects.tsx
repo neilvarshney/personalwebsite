@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Fitness Club Database Management System",
     description:
-      "A simple C.L.I for afitness club database management system built with Python and PostgreSQL. It allows the club to manage its members, classes, and bookings. Provides a basic foundation for a fitness club database management system.",
+      "A simple C.L.I for a fitness club database management system built with Python and PostgreSQL. It allows the club to manage its members, classes, and bookings. Provides a basic foundation for a fitness club database management system.",
     technologies: ["Python", "PostgreSQL", "C.L.I"],
     image: "/dbms.png",
     link: "https://github.com/mfong9164/COMP-3005--Final-Project"
