@@ -10,6 +10,16 @@ const projects = [
     image: "/fakenewsdetector.png",
     link: "https://github.com/neilvarshney/Fake-News-Detector",
   },
+
+  {
+    title: "Fitness Club Database Management System",
+    description:
+      "A simple C.L.I for afitness club database management system built with Python and PostgreSQL. It allows the club to manage its members, classes, and bookings. Provides a basic foundation for a fitness club database management system.",
+    technologies: ["Python", "PostgreSQL", "C.L.I"],
+    image: "/dbms.png",
+    link: "https://github.com/mfong9164/COMP-3005--Final-Project"
+  },
+
   {
     title: "Anime Haven",
     description:
@@ -18,6 +28,7 @@ const projects = [
     image: "/animehaven.png",
     link: "https://github.com/neilvarshney/Anime-Haven",
   },
+
   {
     title: "Password Manager",
     description:
@@ -26,6 +37,7 @@ const projects = [
     image: "/dashboard.png",
     link: "https://github.com/neilvarshney/Password-Manager",
   },
+
   {
     title: "Weather App",
     description:
@@ -34,6 +46,7 @@ const projects = [
     image: "/weatherApp.png",
     link: "https://github.com/neilvarshney/Weather-App",
   },
+  
   {
     title: "Portfolio Website",
     description:

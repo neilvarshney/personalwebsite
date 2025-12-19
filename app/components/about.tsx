@@ -15,39 +15,39 @@ import Link from 'next/link';
 
 const favoriteSongs = [
   {
-    title: 'Part The Red Seas',
+    title: 'EARDRUMMER',
     artist: 'che',
     artistUrl: 'https://open.spotify.com/artist/5A7T1LAGJg5NXySBoIKUmF?si=G8gJYwQOSDylUf03a1rgdA',
-    albumArt: '/che.jpg',
-    audioUrl: '/seas.mp3',
+    albumArt: '/eardrummer.jpg',
+    audioUrl: '/eardrummer.mp3',
     links: {
-      spotify: 'https://open.spotify.com/artist/5A7T1LAGJg5NXySBoIKUmF?si=xZEqSEMxSxipkYkD8YbGug',
-      youtube: 'https://www.youtube.com/@che1101',
-      soundcloud: 'https://soundcloud.com/che'
+      spotify: 'https://open.spotify.com/track/1wDkJu5A6GlgtxHf7HEc5d',
+      youtube: 'https://www.youtube.com/watch?v=xRZdfu-OpcU',
+      soundcloud: 'https://soundcloud.com/che/eardrummer-15?in=slommmy/sets/cord'
     }
   },
   {
-    title: 'When You Left (One Way! 3)',
-    artist: 'Autumn!',
-    artistUrl: 'https://open.spotify.com/artist/5delTPpDAtBDsjk60f5xnt',
-    albumArt: '/oneway3.png',
-    audioUrl: '/oneway3.mp3',
+    title: 'Holding',
+    artist: 'slayr',
+    artistUrl: 'https://open.spotify.com/artist/0SL3lfuoRP67mrvkdnwIMA?si=zcgzTcbyQbiOb-_tceqp2g',
+    albumArt: '/holding.jpg',
+    audioUrl: '/holding.mp3',
     links: {
-      spotify: 'https://open.spotify.com/album/5nRZvptYSovwcoaz75pMUU?si=kdlPl95LQd6EqlOhCiMWWw',
-      youtube: 'https://www.youtube.com/@autumn4238/videos',
-      soundcloud: 'https://soundcloud.com/twinuzis/when-you-left'
+      spotify: 'https://open.spotify.com/track/41lrNJzjofQhowuJh065pS?si=c74b855024124de2',
+      youtube: 'https://www.youtube.com/watch?v=GXq_3CULKDE',
+      soundcloud: 'https://soundcloud.com/slayer77/holding'
     }
   },
   {
-    title: 'idk wtf',
-    artist: 'prettifun',
-    artistUrl: 'https://open.spotify.com/artist/3J3ngZn7GjzjwCPBkqtz65?si=foAe1fqrTUSO1qGUmSG8lQ',
-    albumArt: '/idkwtf.jpg',
-    audioUrl: '/idkwtf.mp3',
+    title: 'FIGURE ME OUT',
+    artist: 'SoFaygo',
+    artistUrl: 'https://open.spotify.com/artist/2SJhf6rTOU53g8yBdAjPby?si=ebnXXlRaQNGAwTCWPnDjlA',
+    albumArt: '/figuremeout.jpg',
+    audioUrl: '/figuremeout.mp3',
     links: {
-      spotify: 'https://open.spotify.com/album/3N9AYh1fFKKBzjC7tB9tcL?si=_iznXMjWRIycQC5jpiFJXQ',
-      youtube: 'https://www.youtube.com/watch?v=nFpbYHMJyy8',
-      soundcloud: 'https://soundcloud.com/prettifun/idk-wtf'
+      spotify: 'https://open.spotify.com/track/72WXrf5HVOHMYh98WEYSr0',
+      youtube: 'https://www.youtube.com/watch?v=MEPEjyrCVSI',
+      soundcloud: 'https://soundcloud.com/imsofaygo/figure-me-out-11?in=imsofaygo%2Fsets%2Fmania'
     }
   }
 ];
