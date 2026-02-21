@@ -84,7 +84,7 @@ const skills = [
       { name: "Git", icon: FaGithub },
       { name: "GitHub", icon: FaGithub },
       { name: "Linux", icon: SiLinux },
-      { name: "RESTful APIs", icon: FaServer }
+      { name: "M365", icon: FaMicrosoft }
     ],
   },
 ];
