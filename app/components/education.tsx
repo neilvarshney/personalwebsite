@@ -47,7 +47,7 @@ export function Education() {
                                     </div>
                                     <div className="flex items-center gap-3 p-3 bg-green-500/10 rounded-lg border border-green-500/20">
                                         <FaAward className="text-green-500 text-lg" />
-                                        <span><strong className="font-bold text-white">CGPA:</strong> <span className="text-gray-300">10.75/12 (A-)</span></span>
+                                        <span><strong className="font-bold text-white">CGPA:</strong> <span className="text-gray-300">10.88/12 (A-)</span></span>
                                     </div>
                                 </div>
 

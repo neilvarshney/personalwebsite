@@ -154,10 +154,10 @@ function DockIcon({ children, className = "" }: DockIconProps) {
 const sections = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "resume", label: "Education" },
-  // { id: "experience", label: "Experience" },
   { id: "contact", label: "Contact" },
 ];
 

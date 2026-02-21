@@ -7,6 +7,7 @@ import { Projects } from "./components/projects";
 import { Contact } from "./components/contact";
 import { Skills } from "./components/skills";
 import { Education } from "./components/education";
+import { Experience } from "./components/experience";
 import Aurora from "./components/aurora";
 
 declare global {
@@ -26,6 +27,10 @@ export default function Home() {
         
         <section id="about" className="py-90 flex flex-col items-start">
           <About />
+        </section>
+
+        <section id="experience" className="py-90 flex flex-col items-start">
+          <Experience />
         </section>
         
         <section id="skills" className="py-90 flex flex-col items-start">

@@ -96,7 +96,6 @@ export function About() {
 
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <FaCode className="text-green-500 text-xl" />
                   <span className="font-bold text-lg text-white">Career Goals</span>
                 </div>
                 <p className="text-lg text-gray-300 leading-relaxed">
@@ -111,7 +110,6 @@ export function About() {
               {/* Interests Section */}
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
-                  <FaGamepad className="text-purple-500 text-xl" />
                   <span className="font-bold text-lg text-white">Interests & Hobbies</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
