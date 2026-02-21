@@ -12,7 +12,8 @@ import {
   FaGithub,
   FaReact,
   FaNodeJs,
-  FaDocker
+  FaDocker,
+  FaMicrosoft
 } from 'react-icons/fa';
 import { 
   SiPostgresql,
