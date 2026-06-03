@@ -71,15 +71,14 @@ export function About() {
             <h3 className="text-2xl font-bold text-white">Personal Introduction</h3>
           </div>
           
-          <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
-            <div className="lg:w-2/3 space-y-6">
+          <div className="w-full space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
                 I'm Neil Varshney, a passionate <span className="font-bold text-green-300">Computer Science student at Carleton University</span>, 
                 focusing on 
                 <span className="font-bold text-green-300"> Computer and Internet Security</span>. I have an ambition for 
                 <span className="font-bold text-green-300"> full-stack development, artificial intelligence, and
-                cybersecurity</span>. I have several projects that are currently in the making, so stay tuned! Aside from my academic and technical interests,
-                I have a serious passion for soccer (Hala Madrid!), FPS video games, and music! I also recently started enjoying photos, 
+                cybersecurity</span>. Aside from my academic and technical interests,
+                I have a serious passion for soccer (Hala Madrid!), FPS video games, and music! I also recently started enjoying taking photos, 
                 <a href="/photography"> <span className="font-bold hover:underline">check out my gallery!</span></a>
               </p>      
             
@@ -134,9 +133,9 @@ export function About() {
                   </Link>
                 </div>
               </div>
-            </div>
+            {/* </div> */}
           
-            <div className="lg:w-1/3 flex flex-col items-start gap-4 lg:pt-0 xs:pt-10">
+            {/* <div className="lg:w-1/3 flex flex-col items-start gap-4 lg:pt-0 xs:pt-10">
                 <div className="flex items-center gap-3">
                     <FaHeadphones className="text-green-500 text-2xl" />
                     <h4 className="text-xl font-bold text-white">Currently Listening To</h4>
@@ -144,7 +143,7 @@ export function About() {
                 {favoriteSongs.map((song, index) => (
                     <MusicPlayer key={index} song={song} />
                 ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </ScrollFloat>

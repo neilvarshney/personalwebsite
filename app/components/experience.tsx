@@ -7,13 +7,25 @@ import {
 } from 'react-icons/fa6';
 
 const experiences = [
+
+  {
+    company: "Employment & Social Development Canada",
+    position: "Junior Business Analyst",
+    location: "Gatineau, QC",
+    startDate: "May 2026",
+    endDate: "Present",
+    responsibilities: [
+      "To be determined...",
+    ],
+    technologies: []
+  },
+
   {
     company: "Health Canada",
     position: "Data Management & Digital Transformation Student",
     location: "Ottawa, ON",
     startDate: "January 2026",
-    endDate: "Present",
-    description: "Supporting cutting-edge projects in RF/EMF human exposure assessment and digital transformation initiatives. Contributing to data science deliverables including data cataloging, database development for 3D simulation and experimental research data, and creating PowerBI dashboards to support Canada's leadership in radiation safety and standards.",
+    endDate: "April 2026",
     responsibilities: [
       "Designed a comprehensive Data Catalog and Data Dictionaries on SharePoint to standardize the organization of scientific data assets",
       "Architected SharePoint site structures and implemented metadata tagging systems to streamline collaborative workflows and file management",
@@ -61,9 +73,6 @@ export function Experience() {
                 </div>
               </div>
 
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                {exp.description}
-              </p>
 
               <div className="mb-6">
                 <div className="flex items-center gap-2 mb-4">

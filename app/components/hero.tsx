@@ -4,16 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import { FaArrowDown } from 'react-icons/fa6';
 import { FadeIn } from "./fade-in";
 import { 
-  FaFilePdf, 
-  FaDownload, 
-  FaEye, 
-  FaGraduationCap, 
-  FaBriefcase, 
-  FaCode,
-  FaAward,
-  FaBook,
-  FaCalendar,
-  FaUsers
+  FaEye
 } from 'react-icons/fa6';
 
 const scrollToSection = (sectionId: string) => {

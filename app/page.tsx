@@ -8,7 +8,6 @@ import { Contact } from "./components/contact";
 import { Skills } from "./components/skills";
 import { Education } from "./components/education";
 import { Experience } from "./components/experience";
-import Aurora from "./components/aurora";
 
 declare global {
   interface Window {
