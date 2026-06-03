@@ -37,7 +37,7 @@ const experiences = [
 
 export function Experience() {
   return (
-    <div className="prose prose-neutral dark:prose-invert font-['Poppins']">
+    <div className="w-full space-y-6 prose prose-neutral dark:prose-invert font-['Poppins']">
       <ScrollFloat
         animationDuration={1}
         ease="back.inOut(2)"
@@ -56,9 +56,9 @@ export function Experience() {
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-2xl font-bold text-white">{exp.position}</h3>
+                    <h3 className="text-2xl text-white">{exp.position}</h3>
                   </div>
-                  <p className="text-xl text-green-300 font-semibold mb-4">{exp.company}</p>
+                  <p className="text-xl text-green-300 font-bold mb-4 font-style: italic">{exp.company}</p>
                   
                   <div className="flex flex-wrap gap-4 text-gray-300 mb-4">
                     <div className="flex items-center gap-2">
