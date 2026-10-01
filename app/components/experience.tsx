@@ -10,19 +10,21 @@ const experiences = [
 
   {
     company: "Employment & Social Development Canada",
-    position: "Junior Business Analyst",
+    position: "Data Engineer & Threat Detection Analyst Co-op",
     location: "Gatineau, QC",
     startDate: "May 2026",
     endDate: "Present",
     responsibilities: [
-      "To be determined...",
+      "Built manual ETL pipelines in Python using Polars to clean Parquet files and build a LadybugDB graph database",
+      "Modeled HTTP request logs in LadybugDB to extract session data and map account relationships for a fraud detection platform",
+      "Analyzed program datasets to detect high-risk activity and presented statistical threat findings to management"
     ],
-    technologies: []
+    technologies: ["Python", "Polars", "LadybugDB", "SQL", "Jupyter Notebook", "Git"]
   },
 
   {
     company: "Health Canada",
-    position: "Data Management & Digital Transformation Student",
+    position: "Data Management & Digital Transformation Co-op",
     location: "Ottawa, ON",
     startDate: "January 2026",
     endDate: "April 2026",

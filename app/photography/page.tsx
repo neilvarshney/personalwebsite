@@ -15,7 +15,7 @@ const photographyData = [
     imageUrl: "/downtown.jpg",
     location: "Toronto, ON",
     category: "Urban",
-    height: "h-120",
+    height: "h-100",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const photographyData = [
     imageUrl: "/TMU.jpg",
     location: "Toronto, ON",
     category: "Urban",
-    height: "h-110",
+    height: "h-100",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const photographyData = [
     imageUrl: "/greatviewOttawa.jpeg",
     location: "Ottawa, ON",
     category: "Urban",
-    height: "h-80",
+    height: "h-100",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const photographyData = [
     imageUrl: "/dtChicagoLake.jpeg",
     location: "Chicago, IL",
     category: "Urban",
-    height: "h-120",
+    height: "h-100",
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const photographyData = [
     imageUrl: "/dtChicago.jpeg",
     location: "Chicago, IL",
     category: "Urban",
-    height: "h-80",
+    height: "h-100",
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ const photographyData = [
     imageUrl: "/burl1.jpeg",
     location: "Burlington, ON",
     category: "Urban",
-    height: "h-110",
+    height: "h-100",
   },
   {
     id: 8,
@@ -87,7 +87,7 @@ const photographyData = [
     imageUrl: "/burl3.jpeg",
     location: "Burlington, ON",
     category: "Urban",
-    height: "h-80",
+    height: "h-100",
   },
   {
     id: 10,
@@ -96,7 +96,7 @@ const photographyData = [
     imageUrl: "/p1.jpeg",
     location: "Ottawa, ON",
     category: "Urban",
-    height: "h-80",
+    height: "h-100",
   },
   {
     id: 11,
@@ -105,7 +105,7 @@ const photographyData = [
     imageUrl: "/p2.jpeg",
     location: "Ottawa, ON",
     category: "Urban",
-    height: "h-80",
+    height: "h-100",
   },
   {
     id: 12,
@@ -114,7 +114,88 @@ const photographyData = [
     imageUrl: "/CNTower.jpg",
     location: "Toronto, ON",
     category: "Urban",
-    height: "h-76",
+    height: "h-100",
+  },
+  {
+    id: 13,
+    title: "Ferris Wheel Montreal",
+    description: "Ferrirs Wheel Montreal",
+    imageUrl: "/IMG_3789.jpg",
+    location: "Montreal, QC",
+    category: "Urban",
+    height: "h-100",
+  },
+  {
+    id: 14,
+    title: "",
+    description: "",
+    imageUrl: "/IMG_3659 (1).JPG",
+    location: "North York, ON",
+    category: "",
+    height: "h-100",
+  },
+  {
+    id: 15,
+    title: "",
+    description: "",
+    imageUrl: "/IMG_3409.JPG",
+    location: "Banff, AB",
+    category: "",
+    height: "h-100",
+  },
+  {
+    id: 16,
+    title: "",
+    description: "",
+    imageUrl: "/IMG_3412.JPG",
+    location: "Banff, AB",
+    category: "",
+    height: "h-100",
+  },
+  {
+    id: 17,
+    title: "",
+    description: "",
+    imageUrl: "/IMG_3421.JPG",
+    location: "Banff, AB",
+    category: "",
+    height: "h-100",
+  },
+  {
+    id: 18,
+    title: "",
+    description: "",
+    imageUrl: "/IMG_3666.JPG",
+    location: "North York, ON",
+    category: "",
+    height: "h-100",
+  },
+  {
+    id: 19,
+    title: "",
+    description: "",
+    imageUrl: "/IMG_3676.JPG",
+    location: "Toronto, ON",
+    category: "",
+    height: "h-100",
+  },
+  {
+    id: 20,
+    title: "",
+    description: "",
+    imageUrl: "/IMG_3680.JPG",
+    location: "Toronto, ON",
+    category: "",
+    height: "h-100",
+  },
+  {
+    id: 21,
+    title: "",
+    description: "",
+    imageUrl: "/IMG_3782.JPG",
+    location: "Montreal, QC",
+    category: "",
+    height: "h-100",
   },
 ];
 
@@ -160,12 +241,14 @@ export default function PhotographyPage() {
             scrollEnd="bottom top+=20%"
             stagger={0.1}
           >
-            <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
-              {photographyData.map((photo, index) => {
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {[...photographyData]
+                .sort((first, second) => second.id - first.id)
+                .map((photo, index) => {
                 return (
-                  <FadeIn key={photo.id} delay={index * 0.1}>
+                  <FadeIn key={photo.imageUrl} delay={index * 0.1}>
                     <div 
-                      className={`relative group break-inside-avoid mb-4 overflow-hidden rounded-xl bg-gray-900/50 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 ${photo.height}`}
+                      className={`relative group overflow-hidden rounded-xl bg-gray-900/50 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 ${photo.height}`}
                     >
                       <Image
                         src={photo.imageUrl}

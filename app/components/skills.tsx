@@ -13,7 +13,8 @@ import {
   FaReact,
   FaNodeJs,
   FaDocker,
-  FaMicrosoft
+  FaMicrosoft,
+  FaBug
 } from 'react-icons/fa';
 import { 
   SiPostgresql,
@@ -66,6 +67,7 @@ const skills = [
     color: "text-green-500",
     items: [
       { name: "MongoDB", icon: SiMongodb },
+      { name: "LadybugDB", icon: FaBug },
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "SQLite", icon: SiSqlite },
       { name: "Node.js", icon: FaNodeJs },
