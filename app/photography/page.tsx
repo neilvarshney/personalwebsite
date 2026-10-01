@@ -120,7 +120,7 @@ const photographyData = [
     id: 13,
     title: "Ferris Wheel Montreal",
     description: "Ferrirs Wheel Montreal",
-    imageUrl: "/IMG_3789.jpg",
+    imageUrl: "/IMG_3789.JPG",
     location: "Montreal, QC",
     category: "Urban",
     height: "h-100",
